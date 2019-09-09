@@ -26,13 +26,14 @@ class User extends Api
      */
     public function index()
     {
-        $this->success('', ['welcome' => $this->auth->nickname]);
+        $user = $this->auth->getUser();
+        $this->success('', ['welcome' => $user]);
     }
 
     /**
      * 会员登录
      *
-     * @param string $account  账号
+     * @param string $account 账号
      * @param string $password 密码
      */
     public function login()
@@ -54,7 +55,7 @@ class User extends Api
     /**
      * 手机验证码登录
      *
-     * @param string $mobile  手机号
+     * @param string $mobile 手机号
      * @param string $captcha 验证码
      */
     public function mobilelogin()
@@ -94,8 +95,8 @@ class User extends Api
      *
      * @param string $username 用户名
      * @param string $password 密码
-     * @param string $email    邮箱
-     * @param string $mobile   手机号
+     * @param string $email 邮箱
+     * @param string $mobile 手机号
      */
     public function register()
     {
@@ -133,10 +134,10 @@ class User extends Api
     /**
      * 修改会员个人信息
      *
-     * @param string $avatar   头像地址
+     * @param string $avatar 头像地址
      * @param string $username 用户名
      * @param string $nickname 昵称
-     * @param string $bio      个人简介
+     * @param string $bio 个人简介
      */
     public function profile()
     {
@@ -162,7 +163,7 @@ class User extends Api
     /**
      * 修改邮箱
      *
-     * @param string $email   邮箱
+     * @param string $email 邮箱
      * @param string $captcha 验证码
      */
     public function changeemail()
@@ -196,7 +197,7 @@ class User extends Api
     /**
      * 修改手机号
      *
-     * @param string $email   手机号
+     * @param string $email 手机号
      * @param string $captcha 验证码
      */
     public function changemobile()
@@ -231,7 +232,7 @@ class User extends Api
      * 第三方登录
      *
      * @param string $platform 平台名称
-     * @param string $code     Code码
+     * @param string $code Code码
      */
     public function third()
     {
@@ -249,7 +250,7 @@ class User extends Api
             $loginret = \addons\third\library\Service::connect($platform, $result);
             if ($loginret) {
                 $data = [
-                    'userinfo'  => $this->auth->getUserinfo(),
+                    'userinfo' => $this->auth->getUserinfo(),
                     'thirdinfo' => $result
                 ];
                 $this->success(__('Logged in successful'), $data);
@@ -261,9 +262,9 @@ class User extends Api
     /**
      * 重置密码
      *
-     * @param string $mobile      手机号
+     * @param string $mobile 手机号
      * @param string $newpassword 新密码
-     * @param string $captcha     验证码
+     * @param string $captcha 验证码
      */
     public function resetpwd()
     {

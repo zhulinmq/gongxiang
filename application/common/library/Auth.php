@@ -95,7 +95,13 @@ class Auth
                 'id' => $user_info['id'],
                 'username' => $user_info['username'],
                 'mobile' => $user_info['mobile'],
-                'avatar' => $user_info['avatar']
+                'avatar' => $user_info['avatar'],
+                'status' => $user_info['status'],
+                'money' => $user_info['money'],
+                'logintime' => $user_info['logintime'],
+                'createtime' => $user_info['createtime'],
+                'token' => $user_info['token'],
+
             ];
             if (!$user) {
                 $this->setError('Account not exist');

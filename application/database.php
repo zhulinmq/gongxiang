@@ -2,6 +2,7 @@
 
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
+#!/bin/sh
 // +----------------------------------------------------------------------
 // | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
@@ -18,11 +19,11 @@ return [
     // 服务器地址
     'hostname'        => Env::get('database.hostname', '127.0.0.1'),
     // 数据库名
-    'database'        => Env::get('database.database', 'gongxiang'),
+    'database'        => Env::get('database.database', 'fastadmin'),
     // 用户名
     'username'        => Env::get('database.username', 'root'),
     // 密码
-    'password'        => Env::get('database.password', 'root'),
+    'password'        => Env::get('database.password', '1911145c6077d5d6'),
     // 端口
     'hostport'        => Env::get('database.hostport', ''),
     // 连接dsn

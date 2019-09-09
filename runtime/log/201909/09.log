@@ -39,3 +39,2412 @@
   2 => 'config',
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:30:24+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/
+[运行时间：0.112644s] [吞吐率：8.88req/s] [内存消耗：4,382.58kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000096s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001011s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568008567; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.027676s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[/www/wwwroot/gongxiang/thinkphp/library/think/db/Connection.php:295]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:26+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/
+[运行时间：0.077030s] [吞吐率：12.98req/s] [内存消耗：5,207.38kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000077s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001023s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568008567; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012838s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/gongxiang/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006923s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.001465s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '3875733cf5dcc0e616c4f35825f01be83337c075' LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000531s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:29+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/index/login.html
+[运行时间：0.129692s] [吞吐率：7.71req/s] [内存消耗：4,367.05kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000101s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001542s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002437s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /www/wwwroot/gongxiang/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'code',
+  6 => 'msg',
+  7 => 'data',
+  8 => 'url',
+  9 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000167s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:32+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/index/index
+[运行时间：0.983553s] [吞吐率：1.02req/s] [内存消耗：6,021.65kb] [文件加载：149]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000111s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000983s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001646s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/gongxiang/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000236s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000488s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:33+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/index/index
+[运行时间：1.133075s] [吞吐率：0.88req/s] [内存消耗：5,700.01kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000963s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001593s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/gongxiang/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000105s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011501s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.008361s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:33+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/dashboard?addtabs=1
+[运行时间：0.095726s] [吞吐率：10.45req/s] [内存消耗：5,718.13kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001208s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001587s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /www/wwwroot/gongxiang/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000119s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000401s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.011543s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:34+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=index&v=1568021612
+[运行时间：0.059257s] [吞吐率：16.88req/s] [内存消耗：4,216.95kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000951s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1568021612',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012995s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000196s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:35+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=dashboard&v=1568021613
+[运行时间：0.099648s] [吞吐率：10.04req/s] [内存消耗：4,215.14kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023659s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1568021613',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002382s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000099s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:37+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category?ref=addtabs
+[运行时间：0.071594s] [吞吐率：13.97req/s] [内存消耗：4,926.13kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000080s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018711s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001492s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000135s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000514s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000422s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:38+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/index/index
+[运行时间：1.021357s] [吞吐率：0.98req/s] [内存消耗：5,702.89kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000943s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.031305s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/gongxiang/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000191s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040451s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.009628s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:38+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category?addtabs=1
+[运行时间：1.030206s] [吞吐率：0.97req/s] [内存消耗：5,846.61kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000917s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/category?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.028720s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ RUN ] app\admin\controller\Category->index[ /www/wwwroot/gongxiang/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/category/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'flagList',
+  6 => 'typeList',
+  7 => 'parentList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000095s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007880s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000831s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000900s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:39+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/general/attachment?addtabs=1
+[运行时间：0.086509s] [吞吐率：11.56req/s] [内存消耗：5,659.13kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001218s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.attachment',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/general/attachment?ref=addtabs',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001470s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ RUN ] app\admin\controller\general\Attachment->index[ /www/wwwroot/gongxiang/application/admin/controller/general/Attachment.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/general/attachment/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000101s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021958s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'general/attachment' LIMIT 1 [ RunTime:0.008520s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:39+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category?addtabs=1
+[运行时间：0.108849s] [吞吐率：9.19req/s] [内存消耗：5,648.06kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001026s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002247s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ RUN ] app\admin\controller\Category->index[ /www/wwwroot/gongxiang/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/category/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'flagList',
+  6 => 'typeList',
+  7 => 'parentList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000090s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017870s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.007482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000792s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000415s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:39+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/dashboard?addtabs=1
+[运行时间：0.122062s] [吞吐率：8.19req/s] [内存消耗：5,470.45kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001033s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.010166s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /www/wwwroot/gongxiang/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000104s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000442s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.021832s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.010259s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:33:40+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=index&v=1568021617
+[运行时间：0.054212s] [吞吐率：18.45req/s] [内存消耗：4,217.20kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000946s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1568021617',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012704s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000115s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:40+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=category&v=1568021619
+[运行时间：0.076666s] [吞吐率：13.04req/s] [内存消耗：4,210.12kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000075s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000975s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/category?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'category',
+  'v' => '1568021619',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001517s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000144s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:40+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=dashboard&v=1568021619
+[运行时间：0.076668s] [吞吐率：13.04req/s] [内存消耗：4,215.39kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000941s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1568021619',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.008532s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000106s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:33:44+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category/index?sort=weigh&order=desc&_=1568021620040
+[运行时间：0.078944s] [吞吐率：12.67req/s] [内存消耗：5,672.06kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001460s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://139.199.164.132:2000/admin/category?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  '_' => '1568021620040',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001723s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ RUN ] app\admin\controller\Category->index[ /www/wwwroot/gongxiang/application/admin/controller/Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000096s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006730s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000401s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:40:54+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category?ref=addtabs
+[运行时间：0.070473s] [吞吐率：14.19req/s] [内存消耗：4,926.04kb] [文件加载：132]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000945s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001467s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000093s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002499s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000450s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:40:55+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/index/index
+[运行时间：0.986175s] [吞吐率：1.01req/s] [内存消耗：5,702.75kb] [文件加载：147]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001030s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001518s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /www/wwwroot/gongxiang/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000095s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007506s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001342s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.001012s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000687s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:40:56+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/dashboard?addtabs=1
+[运行时间：0.104795s] [吞吐率：9.54req/s] [内存消耗：5,470.45kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004464s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001436s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /www/wwwroot/gongxiang/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000095s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000455s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000560s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:40:56+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category?addtabs=1
+[运行时间：0.139208s] [吞吐率：7.18req/s] [内存消耗：5,648.06kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001523s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001382s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ RUN ] app\admin\controller\Category->index[ /www/wwwroot/gongxiang/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/admin/view/category/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'flagList',
+  6 => 'typeList',
+  7 => 'parentList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000086s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003148s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.000350s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:40:57+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=index&v=1568022054
+[运行时间：0.064932s] [吞吐率：15.40req/s] [内存消耗：4,217.20kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000140s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001374s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1568022054',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001727s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000099s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:40:57+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=dashboard&v=1568022056
+[运行时间：0.078004s] [吞吐率：12.82req/s] [内存消耗：4,215.39kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005244s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/dashboard?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1568022056',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001452s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000102s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:40:57+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/ajax/lang?callback=define&controllername=category&v=1568022056
+[运行时间：0.115136s] [吞吐率：8.69req/s] [内存消耗：4,210.60kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000028s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.044332s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://139.199.164.132:2000/admin/category?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'category',
+  'v' => '1568022056',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001474s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /www/wwwroot/gongxiang/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000100s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T17:41:02+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/admin/category/index?sort=weigh&order=desc&_=1568022057127
+[运行时间：0.079191s] [吞吐率：12.63req/s] [内存消耗：5,672.06kb] [文件加载：138]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001100s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'content-type' => 'application/json',
+  'referer' => 'http://139.199.164.132:2000/admin/category?addtabs=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  '_' => '1568022057127',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002105s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/admin/lang/zh-cn/category.php
+[ info ] [ RUN ] app\admin\controller\Category->index[ /www/wwwroot/gongxiang/application/admin/controller/Category.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000104s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001696s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.000369s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:42:17+08:00 ] 47.103.65.214 POST 139.199.164.132:2000/api/user/login
+[运行时间：0.142749s] [吞吐率：7.01req/s] [内存消耗：4,736.50kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001023s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '29',
+  'host' => '139.199.164.132:2000',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'test',
+  'password' => 'test123',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001641s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000472s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'test' LIMIT 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `prevtime`=1568008941,`logintime`=1568022137,`loginip`='47.103.65.214',`updatetime`=1568022137  WHERE  `id` = 2 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.006950s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('4f076872ab6686b7f45d0b64d471f82bdb327148' , 2 , 1568022137 , 1570614137) [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '4f076872ab6686b7f45d0b64d471f82bdb327148' LIMIT 1 [ RunTime:0.000447s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:45:00+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/api/user/index
+[运行时间：0.061766s] [吞吐率：16.19req/s] [内存消耗：4,655.09kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000967s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'referer' => 'http://139.199.164.132:2000/api.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001487s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->index[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000383s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '3875733cf5dcc0e616c4f35825f01be83337c075' LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000701s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000369s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:45:25+08:00 ] 49.90.196.170 GET 139.199.164.132:2000/api/user/login?account=test&password=test123
+[运行时间：0.119627s] [吞吐率：8.36req/s] [内存消耗：4,744.33kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001037s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+  'referer' => 'http://139.199.164.132:2000/api.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'BT_PANEL_6=50f432b2-577b-4424-8ac8-e384ee022285.oGy-HRVIEs0IeE1DanTOFIkj-z4; order=id%20desc; memSize=1839; serverType=nginx; sites_path=/www/wwwroot; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1568007529; PHPSESSID=gek78mfaj30tovpll7utkjao45; uid=2; token=aeebbb70-ce91-4052-8990-6e300b20b8d8; request_token=Jq2QDCFKFjXpa3tGSPkrmSRX0QkZVkYGhGoTXODeyLaDtpgU; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1568021608',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'test',
+  'password' => 'test123',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001681s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008993s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '3875733cf5dcc0e616c4f35825f01be83337c075' LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'test' LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `prevtime`=1568022137,`logintime`=1568022325,`loginip`='49.90.196.170',`updatetime`=1568022325  WHERE  `id` = 2 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('e4c485e9a5a58c90f91d584e8b103f2c6b5c959e' , 2 , 1568022325 , 1570614325) [ RunTime:0.011292s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e' LIMIT 1 [ RunTime:0.000559s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:50:58+08:00 ] 47.103.65.214 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.042005s] [吞吐率：23.81req/s] [内存消耗：4,082.10kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001182s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => 'be302735767a97c2168fefff435e28f32879bebf',
+  'content-length' => '0',
+  'host' => '139.199.164.132:2000',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.008982s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '8eb092ab79ed6bed42bf773b308dc5469ddc7caa' LIMIT 1 [ RunTime:0.000434s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:51:48+08:00 ] 47.103.65.214 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.053372s] [吞吐率：18.74req/s] [内存消耗：4,082.10kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000934s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'content-length' => '0',
+  'host' => '139.199.164.132:2000',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013673s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000381s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000294s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:51:51+08:00 ] 47.103.65.214 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.056021s] [吞吐率：17.85req/s] [内存消耗：4,082.10kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000941s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'content-length' => '0',
+  'host' => '139.199.164.132:2000',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.013256s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010717s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000319s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:52:37+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.066296s] [吞吐率：15.08req/s] [内存消耗：4,083.90kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001158s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '4e338560-dd79-4758-9766-fde023c41078',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.012754s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000311s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:53:52+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.039678s] [吞吐率：25.20req/s] [内存消耗：4,083.90kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001025s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f47e274f-8b06-4dc7-86b5-ad3d67395c46',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001359s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000524s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:53:53+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.063988s] [吞吐率：15.63req/s] [内存消耗：4,083.90kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001059s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b1b3699f-25b6-444d-ad0e-ebceb313db31',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001450s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000433s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.015763s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:53:55+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.052085s] [吞吐率：19.20req/s] [内存消耗：4,083.90kb] [文件加载：124]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000917s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => 'e4c485e9a5a58c90f91d584e8b103f2c6b5c959e',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'd1412acf-aff5-46f6-b635-5d46b2b629d9',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001474s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008199s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '51c13b27eca41b8e32604cc490e2a12aeb2ca92f' LIMIT 1 [ RunTime:0.000318s ]
+---------------------------------------------------------------
+[ 2019-09-09T17:55:27+08:00 ] 47.103.65.214 POST 139.199.164.132:2000/api/user/login
+[运行时间：0.145746s] [吞吐率：6.86req/s] [内存消耗：4,736.50kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012853s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '29',
+  'host' => '139.199.164.132:2000',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'test',
+  'password' => 'test123',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001934s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005970s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'test' LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `prevtime`=1568022325,`logintime`=1568022927,`loginip`='47.103.65.214',`updatetime`=1568022927  WHERE  `id` = 2 [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000782s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('e86798117612ab2e21cc1c9f6c6d38b9f121150c' , 2 , 1568022927 , 1570614927) [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = 'e86798117612ab2e21cc1c9f6c6d38b9f121150c' LIMIT 1 [ RunTime:0.000695s ]
+---------------------------------------------------------------
+[ 2019-09-09T22:08:42+08:00 ] 140.82.115.68 POST 139.199.164.132:2000/
+[运行时间：0.062139s] [吞吐率：16.09req/s] [内存消耗：3,885.24kb] [文件加载：122]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000080s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000996s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'accept' => '*/*',
+  'user-agent' => 'GitHub-Hookshot/eb5753a',
+  'x-github-event' => 'ping',
+  'x-github-delivery' => '53cd3850-d30b-11e9-885d-4f0fa369ae43',
+  'content-type' => 'application/json',
+  'x-hub-signature' => 'sha1=e4af4a86c4870f72fe5c667a8a224b5534f79a82',
+  'content-length' => '6480',
+)
+[ info ] [ PARAM ] array (
+  'zen' => 'Non-blocking is better than blocking.',
+  'hook_id' => 138795311,
+  'hook' => 
+  array (
+    'type' => 'Repository',
+    'id' => 138795311,
+    'name' => 'web',
+    'active' => true,
+    'events' => 
+    array (
+      0 => 'push',
+    ),
+    'config' => 
+    array (
+      'content_type' => 'json',
+      'insecure_ssl' => '0',
+      'secret' => '********',
+      'url' => 'http://139.199.164.132:2000',
+    ),
+    'updated_at' => '2019-09-09T14:08:41Z',
+    'created_at' => '2019-09-09T14:08:41Z',
+    'url' => 'https://api.github.com/repos/zhulinmq/gongxiang/hooks/138795311',
+    'test_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/hooks/138795311/test',
+    'ping_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/hooks/138795311/pings',
+    'last_response' => 
+    array (
+      'code' => NULL,
+      'status' => 'unused',
+      'message' => NULL,
+    ),
+  ),
+  'repository' => 
+  array (
+    'id' => 207248422,
+    'node_id' => 'MDEwOlJlcG9zaXRvcnkyMDcyNDg0MjI=',
+    'name' => 'gongxiang',
+    'full_name' => 'zhulinmq/gongxiang',
+    'private' => false,
+    'owner' => 
+    array (
+      'login' => 'zhulinmq',
+      'id' => 8003317,
+      'node_id' => 'MDQ6VXNlcjgwMDMzMTc=',
+      'avatar_url' => 'https://avatars1.githubusercontent.com/u/8003317?v=4',
+      'gravatar_id' => '',
+      'url' => 'https://api.github.com/users/zhulinmq',
+      'html_url' => 'https://github.com/zhulinmq',
+      'followers_url' => 'https://api.github.com/users/zhulinmq/followers',
+      'following_url' => 'https://api.github.com/users/zhulinmq/following{/other_user}',
+      'gists_url' => 'https://api.github.com/users/zhulinmq/gists{/gist_id}',
+      'starred_url' => 'https://api.github.com/users/zhulinmq/starred{/owner}{/repo}',
+      'subscriptions_url' => 'https://api.github.com/users/zhulinmq/subscriptions',
+      'organizations_url' => 'https://api.github.com/users/zhulinmq/orgs',
+      'repos_url' => 'https://api.github.com/users/zhulinmq/repos',
+      'events_url' => 'https://api.github.com/users/zhulinmq/events{/privacy}',
+      'received_events_url' => 'https://api.github.com/users/zhulinmq/received_events',
+      'type' => 'User',
+      'site_admin' => false,
+    ),
+    'html_url' => 'https://github.com/zhulinmq/gongxiang',
+    'description' => '共享医疗床',
+    'fork' => false,
+    'url' => 'https://api.github.com/repos/zhulinmq/gongxiang',
+    'forks_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/forks',
+    'keys_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/keys{/key_id}',
+    'collaborators_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/collaborators{/collaborator}',
+    'teams_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/teams',
+    'hooks_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/hooks',
+    'issue_events_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues/events{/number}',
+    'events_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/events',
+    'assignees_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/assignees{/user}',
+    'branches_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/branches{/branch}',
+    'tags_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/tags',
+    'blobs_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/blobs{/sha}',
+    'git_tags_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/tags{/sha}',
+    'git_refs_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/refs{/sha}',
+    'trees_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/trees{/sha}',
+    'statuses_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/statuses/{sha}',
+    'languages_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/languages',
+    'stargazers_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/stargazers',
+    'contributors_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/contributors',
+    'subscribers_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/subscribers',
+    'subscription_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/subscription',
+    'commits_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/commits{/sha}',
+    'git_commits_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/commits{/sha}',
+    'comments_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/comments{/number}',
+    'issue_comment_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues/comments{/number}',
+    'contents_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/contents/{+path}',
+    'compare_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/compare/{base}...{head}',
+    'merges_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/merges',
+    'archive_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/{archive_format}{/ref}',
+    'downloads_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/downloads',
+    'issues_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues{/number}',
+    'pulls_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/pulls{/number}',
+    'milestones_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/milestones{/number}',
+    'notifications_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/notifications{?since,all,participating}',
+    'labels_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/labels{/name}',
+    'releases_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/releases{/id}',
+    'deployments_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/deployments',
+    'created_at' => '2019-09-09T07:18:32Z',
+    'updated_at' => '2019-09-09T09:40:39Z',
+    'pushed_at' => '2019-09-09T09:40:37Z',
+    'git_url' => 'git://github.com/zhulinmq/gongxiang.git',
+    'ssh_url' => 'git@github.com:zhulinmq/gongxiang.git',
+    'clone_url' => 'https://github.com/zhulinmq/gongxiang.git',
+    'svn_url' => 'https://github.com/zhulinmq/gongxiang',
+    'homepage' => NULL,
+    'size' => 16614,
+    'stargazers_count' => 0,
+    'watchers_count' => 0,
+    'language' => 'JavaScript',
+    'has_issues' => true,
+    'has_projects' => true,
+    'has_downloads' => true,
+    'has_wiki' => true,
+    'has_pages' => false,
+    'forks_count' => 0,
+    'mirror_url' => NULL,
+    'archived' => false,
+    'disabled' => false,
+    'open_issues_count' => 0,
+    'license' => 
+    array (
+      'key' => 'apache-2.0',
+      'name' => 'Apache License 2.0',
+      'spdx_id' => 'Apache-2.0',
+      'url' => 'https://api.github.com/licenses/apache-2.0',
+      'node_id' => 'MDc6TGljZW5zZTI=',
+    ),
+    'forks' => 0,
+    'open_issues' => 0,
+    'watchers' => 0,
+    'default_branch' => 'master',
+  ),
+  'sender' => 
+  array (
+    'login' => 'zhulinmq',
+    'id' => 8003317,
+    'node_id' => 'MDQ6VXNlcjgwMDMzMTc=',
+    'avatar_url' => 'https://avatars1.githubusercontent.com/u/8003317?v=4',
+    'gravatar_id' => '',
+    'url' => 'https://api.github.com/users/zhulinmq',
+    'html_url' => 'https://github.com/zhulinmq',
+    'followers_url' => 'https://api.github.com/users/zhulinmq/followers',
+    'following_url' => 'https://api.github.com/users/zhulinmq/following{/other_user}',
+    'gists_url' => 'https://api.github.com/users/zhulinmq/gists{/gist_id}',
+    'starred_url' => 'https://api.github.com/users/zhulinmq/starred{/owner}{/repo}',
+    'subscriptions_url' => 'https://api.github.com/users/zhulinmq/subscriptions',
+    'organizations_url' => 'https://api.github.com/users/zhulinmq/orgs',
+    'repos_url' => 'https://api.github.com/users/zhulinmq/repos',
+    'events_url' => 'https://api.github.com/users/zhulinmq/events{/privacy}',
+    'received_events_url' => 'https://api.github.com/users/zhulinmq/received_events',
+    'type' => 'User',
+    'site_admin' => false,
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001645s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/gongxiang/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T22:14:45+08:00 ] 140.82.115.13 POST 139.199.164.132:2000/
+[运行时间：0.059960s] [吞吐率：16.68req/s] [内存消耗：3,900.53kb] [文件加载：122]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000075s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013339s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '139.199.164.132:2000',
+  'accept' => '*/*',
+  'user-agent' => 'GitHub-Hookshot/eb5753a',
+  'x-github-event' => 'push',
+  'x-github-delivery' => '2c3b66b2-d30c-11e9-9410-3bdc9726b16b',
+  'content-type' => 'application/json',
+  'x-hub-signature' => 'sha1=3faf6af27ed1821fe69f83107339a6f27296af7b',
+  'content-length' => '7594',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'refs/heads/master',
+  'before' => 'd9d86bf122489b1aa0d535a0e83b19340771ce4a',
+  'after' => '40455c231e612bacf3d9b457db0570278b3fb0ca',
+  'repository' => 
+  array (
+    'id' => 207248422,
+    'node_id' => 'MDEwOlJlcG9zaXRvcnkyMDcyNDg0MjI=',
+    'name' => 'gongxiang',
+    'full_name' => 'zhulinmq/gongxiang',
+    'private' => false,
+    'owner' => 
+    array (
+      'name' => 'zhulinmq',
+      'email' => 'zhulinmq@163.com',
+      'login' => 'zhulinmq',
+      'id' => 8003317,
+      'node_id' => 'MDQ6VXNlcjgwMDMzMTc=',
+      'avatar_url' => 'https://avatars1.githubusercontent.com/u/8003317?v=4',
+      'gravatar_id' => '',
+      'url' => 'https://api.github.com/users/zhulinmq',
+      'html_url' => 'https://github.com/zhulinmq',
+      'followers_url' => 'https://api.github.com/users/zhulinmq/followers',
+      'following_url' => 'https://api.github.com/users/zhulinmq/following{/other_user}',
+      'gists_url' => 'https://api.github.com/users/zhulinmq/gists{/gist_id}',
+      'starred_url' => 'https://api.github.com/users/zhulinmq/starred{/owner}{/repo}',
+      'subscriptions_url' => 'https://api.github.com/users/zhulinmq/subscriptions',
+      'organizations_url' => 'https://api.github.com/users/zhulinmq/orgs',
+      'repos_url' => 'https://api.github.com/users/zhulinmq/repos',
+      'events_url' => 'https://api.github.com/users/zhulinmq/events{/privacy}',
+      'received_events_url' => 'https://api.github.com/users/zhulinmq/received_events',
+      'type' => 'User',
+      'site_admin' => false,
+    ),
+    'html_url' => 'https://github.com/zhulinmq/gongxiang',
+    'description' => '共享医疗床',
+    'fork' => false,
+    'url' => 'https://github.com/zhulinmq/gongxiang',
+    'forks_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/forks',
+    'keys_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/keys{/key_id}',
+    'collaborators_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/collaborators{/collaborator}',
+    'teams_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/teams',
+    'hooks_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/hooks',
+    'issue_events_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues/events{/number}',
+    'events_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/events',
+    'assignees_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/assignees{/user}',
+    'branches_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/branches{/branch}',
+    'tags_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/tags',
+    'blobs_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/blobs{/sha}',
+    'git_tags_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/tags{/sha}',
+    'git_refs_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/refs{/sha}',
+    'trees_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/trees{/sha}',
+    'statuses_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/statuses/{sha}',
+    'languages_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/languages',
+    'stargazers_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/stargazers',
+    'contributors_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/contributors',
+    'subscribers_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/subscribers',
+    'subscription_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/subscription',
+    'commits_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/commits{/sha}',
+    'git_commits_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/git/commits{/sha}',
+    'comments_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/comments{/number}',
+    'issue_comment_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues/comments{/number}',
+    'contents_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/contents/{+path}',
+    'compare_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/compare/{base}...{head}',
+    'merges_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/merges',
+    'archive_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/{archive_format}{/ref}',
+    'downloads_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/downloads',
+    'issues_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/issues{/number}',
+    'pulls_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/pulls{/number}',
+    'milestones_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/milestones{/number}',
+    'notifications_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/notifications{?since,all,participating}',
+    'labels_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/labels{/name}',
+    'releases_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/releases{/id}',
+    'deployments_url' => 'https://api.github.com/repos/zhulinmq/gongxiang/deployments',
+    'created_at' => 1568013512,
+    'updated_at' => '2019-09-09T09:40:39Z',
+    'pushed_at' => 1568038484,
+    'git_url' => 'git://github.com/zhulinmq/gongxiang.git',
+    'ssh_url' => 'git@github.com:zhulinmq/gongxiang.git',
+    'clone_url' => 'https://github.com/zhulinmq/gongxiang.git',
+    'svn_url' => 'https://github.com/zhulinmq/gongxiang',
+    'homepage' => NULL,
+    'size' => 16614,
+    'stargazers_count' => 0,
+    'watchers_count' => 0,
+    'language' => 'JavaScript',
+    'has_issues' => true,
+    'has_projects' => true,
+    'has_downloads' => true,
+    'has_wiki' => true,
+    'has_pages' => false,
+    'forks_count' => 0,
+    'mirror_url' => NULL,
+    'archived' => false,
+    'disabled' => false,
+    'open_issues_count' => 0,
+    'license' => 
+    array (
+      'key' => 'apache-2.0',
+      'name' => 'Apache License 2.0',
+      'spdx_id' => 'Apache-2.0',
+      'url' => 'https://api.github.com/licenses/apache-2.0',
+      'node_id' => 'MDc6TGljZW5zZTI=',
+    ),
+    'forks' => 0,
+    'open_issues' => 0,
+    'watchers' => 0,
+    'default_branch' => 'master',
+    'stargazers' => 0,
+    'master_branch' => 'master',
+  ),
+  'pusher' => 
+  array (
+    'name' => 'zhulinmq',
+    'email' => 'zhulinmq@163.com',
+  ),
+  'created' => false,
+  'deleted' => false,
+  'forced' => false,
+  'base_ref' => NULL,
+  'compare' => 'https://github.com/zhulinmq/gongxiang/compare/d9d86bf12248...40455c231e61',
+  'commits' => 
+  array (
+    0 => 
+    array (
+      'id' => '40455c231e612bacf3d9b457db0570278b3fb0ca',
+      'tree_id' => '7b95c9547f2dbdf5aa629b21d4ac8220064bc215',
+      'distinct' => true,
+      'message' => 'update .gitignore',
+      'timestamp' => '2019-09-09T22:14:27+08:00',
+      'url' => 'https://github.com/zhulinmq/gongxiang/commit/40455c231e612bacf3d9b457db0570278b3fb0ca',
+      'author' => 
+      array (
+        'name' => 'zhulin',
+        'email' => 'zhulinmq@163.com',
+        'username' => 'zhulinmq',
+      ),
+      'committer' => 
+      array (
+        'name' => 'zhulin',
+        'email' => 'zhulinmq@163.com',
+        'username' => 'zhulinmq',
+      ),
+      'added' => 
+      array (
+      ),
+      'removed' => 
+      array (
+        0 => 'runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php',
+        1 => 'runtime/temp/0c97e126fa1d146cc5fd0867c8a303bf.php',
+      ),
+      'modified' => 
+      array (
+        0 => '.gitignore',
+        1 => 'application/api/controller/User.php',
+        2 => 'application/common/library/Auth.php',
+      ),
+    ),
+  ),
+  'head_commit' => 
+  array (
+    'id' => '40455c231e612bacf3d9b457db0570278b3fb0ca',
+    'tree_id' => '7b95c9547f2dbdf5aa629b21d4ac8220064bc215',
+    'distinct' => true,
+    'message' => 'update .gitignore',
+    'timestamp' => '2019-09-09T22:14:27+08:00',
+    'url' => 'https://github.com/zhulinmq/gongxiang/commit/40455c231e612bacf3d9b457db0570278b3fb0ca',
+    'author' => 
+    array (
+      'name' => 'zhulin',
+      'email' => 'zhulinmq@163.com',
+      'username' => 'zhulinmq',
+    ),
+    'committer' => 
+    array (
+      'name' => 'zhulin',
+      'email' => 'zhulinmq@163.com',
+      'username' => 'zhulinmq',
+    ),
+    'added' => 
+    array (
+    ),
+    'removed' => 
+    array (
+      0 => 'runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php',
+      1 => 'runtime/temp/0c97e126fa1d146cc5fd0867c8a303bf.php',
+    ),
+    'modified' => 
+    array (
+      0 => '.gitignore',
+      1 => 'application/api/controller/User.php',
+      2 => 'application/common/library/Auth.php',
+    ),
+  ),
+  'sender' => 
+  array (
+    'login' => 'zhulinmq',
+    'id' => 8003317,
+    'node_id' => 'MDQ6VXNlcjgwMDMzMTc=',
+    'avatar_url' => 'https://avatars1.githubusercontent.com/u/8003317?v=4',
+    'gravatar_id' => '',
+    'url' => 'https://api.github.com/users/zhulinmq',
+    'html_url' => 'https://github.com/zhulinmq',
+    'followers_url' => 'https://api.github.com/users/zhulinmq/followers',
+    'following_url' => 'https://api.github.com/users/zhulinmq/following{/other_user}',
+    'gists_url' => 'https://api.github.com/users/zhulinmq/gists{/gist_id}',
+    'starred_url' => 'https://api.github.com/users/zhulinmq/starred{/owner}{/repo}',
+    'subscriptions_url' => 'https://api.github.com/users/zhulinmq/subscriptions',
+    'organizations_url' => 'https://api.github.com/users/zhulinmq/orgs',
+    'repos_url' => 'https://api.github.com/users/zhulinmq/repos',
+    'events_url' => 'https://api.github.com/users/zhulinmq/events{/privacy}',
+    'received_events_url' => 'https://api.github.com/users/zhulinmq/received_events',
+    'type' => 'User',
+    'site_admin' => false,
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001606s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/gongxiang/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/gongxiang/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-09-09T22:18:01+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/login
+[运行时间：0.135579s] [吞吐率：7.38req/s] [内存消耗：4,739.02kb] [文件加载：130]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000082s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023568s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a8025b1b-4686-4867-9d19-1054b777e312',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------008822270051666479358091',
+  'content-length' => '280',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'test',
+  'password' => 'test123',
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002097s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000497s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `username` = 'test' LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] UPDATE `fa_user`  SET `prevtime`=1568022927,`logintime`=1568038681,`loginip`='49.90.196.170',`updatetime`=1568038681  WHERE  `id` = 2 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] INSERT INTO `fa_user_token` (`token` , `user_id` , `createtime` , `expiretime`) VALUES ('94a2d5cef0c2cd04b0cc96af9a079d065b424f27' , 2 , 1568038681 , 1570630681) [ RunTime:0.011384s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '94a2d5cef0c2cd04b0cc96af9a079d065b424f27' LIMIT 1 [ RunTime:0.000663s ]
+---------------------------------------------------------------
+[ 2019-09-09T22:18:26+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.081013s] [吞吐率：12.34req/s] [内存消耗：4,652.76kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000075s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.023243s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => '4f735641-bab7-4644-9777-2ce5ff3613c1',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '86a8d003-bcf0-4115-8938-65f61dc0dbc4',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001558s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->index[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000496s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '94a2d5cef0c2cd04b0cc96af9a079d065b424f27' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000404s ]

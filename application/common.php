@@ -362,3 +362,24 @@ if (!function_exists('hsv2rgb')) {
         ];
     }
 }
+
+/**
+ * 文件下载
+ * @param  [type] $url  [下载链接包含协议]
+ * @param  [type] $absolute_path [本地绝对路径包含扩展名]
+ * @return [type]       [description]
+ */
+if (!function_exists('download')) {
+    function download($url, $path)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+        $file = curl_exec($ch);
+        curl_close($ch);
+        $resource = fopen($path, 'a');
+        fwrite($resource, $file);
+        fclose($resource);
+    }
+}

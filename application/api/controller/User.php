@@ -2,6 +2,7 @@
 
 namespace app\api\controller;
 
+use addons\third\model\Third;
 use app\common\controller\Api;
 use app\common\library\Ems;
 use app\common\library\Sms;
@@ -13,7 +14,7 @@ use think\Validate;
  */
 class User extends Api
 {
-    protected $noNeedLogin = ['login', 'mobilelogin', 'register', 'resetpwd', 'changeemail', 'changemobile', 'third'];
+    protected $noNeedLogin = ['login', 'mobilelogin', 'register', 'resetpwd', 'changeemail', 'changemobile', 'third', 'sendsms', 'checksms'];
     protected $noNeedRight = '*';
 
     public function _initialize()
@@ -50,6 +51,60 @@ class User extends Api
         } else {
             $this->error($this->auth->getError());
         }
+    }
+
+    /**
+     * 发送手机验证码
+     */
+    public function sendsms()
+    {
+
+        $config = [
+            'accessKeyId' => 'LTAI0RVoIszOewtn',
+            'accessKeySecret' => '0JXQOAP9nvFx5M9qYQo9dfj17cHtiL',
+        ];
+        $mobile = $this->request->request('mobile');
+        $send_type = $this->request->request('send_type');
+        $client = new Client($config);
+        $sendSms = new SendSms;
+        $sendSms->setPhoneNumbers($mobile);
+        $sendSms->setSignName('中斌影视俱乐部');
+        $sendSms->setTemplateCode('SMS_168260296');
+//        $sendSms->setTemplateParam(['code' => $code]);
+        $sendSms->setOutId(time() . rand(100, 999));
+
+//        $k = $mobile . date('Y-m-d');
+//        $count = Redis::get($k);
+//        if ($count > 30) {
+//            return;
+//        }
+//        Redis::incr($k);
+//        if ($count == 0) {
+//            Redis::expire($k, 23 * 60 * 60);
+//        }
+        $res = $client->execute($sendSms);
+
+        print_r($res);
+    }
+
+    /**
+     * 验证手机验证码
+     * use: register(注册) changepwd(修改密码)
+     */
+    public function checksms()
+    {
+        $mobile = $this->request->request('mobile');
+        $use = $this->request->request('use');
+        $code = $this->request->request('code');
+
+        if (!$mobile || !$use || !$code) {
+            $this->error(__('Invalid parameters'));
+        }
+        if (!Sms::check($mobile, $code, 'changepwd')) {
+            $this->error(__('Captcha is incorrect'));
+        }
+        $this->success('success');
+
     }
 
     /**
@@ -100,20 +155,28 @@ class User extends Api
      */
     public function register()
     {
-        $username = $this->request->request('username');
-        $password = $this->request->request('password');
-        $email = $this->request->request('email');
+//        $username = $this->request->request('username');
         $mobile = $this->request->request('mobile');
-        if (!$username || !$password) {
-            $this->error(__('Invalid parameters'));
-        }
-        if ($email && !Validate::is($email, "email")) {
-            $this->error(__('Email is incorrect'));
-        }
+        $password = $this->request->request('password');
+//        $email = $this->request->request('email');
+        $code = $this->request->request('code');
+        $username = $mobile; //默认用户名为手机号
+//        if (!$username || !$password) {
+//            $this->error(__('Invalid parameters'));
+//        }
+//        if ($email && !Validate::is($email, "email")) {
+//            $this->error(__('Email is incorrect'));
+//        }
         if ($mobile && !Validate::regex($mobile, "^1\d{10}$")) {
             $this->error(__('Mobile is incorrect'));
         }
-        $ret = $this->auth->register($username, $password, $email, $mobile, []);
+        //验证手机验证码
+        $errMsg = check_verification_code($mobile, $code, 1, true);
+        if (!empty($errMsg)) {
+            $this->error($errMsg);
+        }
+
+        $ret = $this->auth->register($username, $password, $mobile, []);
         if ($ret) {
             $data = ['userinfo' => $this->auth->getUserinfo()];
             $this->success(__('Sign up successful'), $data);
@@ -143,8 +206,6 @@ class User extends Api
     {
         $user = $this->auth->getUser();
         $username = $this->request->request('username');
-        $nickname = $this->request->request('nickname');
-        $bio = $this->request->request('bio');
         $avatar = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
         if ($username) {
             $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
@@ -153,8 +214,6 @@ class User extends Api
             }
             $user->username = $username;
         }
-        $user->nickname = $nickname;
-        $user->bio = $bio;
         $user->avatar = $avatar;
         $user->save();
         $this->success();
@@ -238,7 +297,7 @@ class User extends Api
     {
         $url = url('user/index');
 //        $platform = $this->request->request("platform");
-        $platform =   //微信登陆
+        $platform = 'wechat';   //微信登陆
         $code = $this->request->request("code");
         $config = get_addon_config('third');
         if (!$config || !isset($config[$platform])) {
@@ -311,6 +370,36 @@ class User extends Api
             $this->success(__('Reset password successful'));
         } else {
             $this->error($this->auth->getError());
+        }
+    }
+
+    /**
+     * 绑定微信
+     * @param $unionid
+     * @param $openid
+     */
+    public function bindWechat()
+    {
+        $param = $this->request->param();
+        if (!$param['openid'] || !$param['nickname']) {
+            $this->error(__('Invalid parameters'));
+        }
+        $user_info = $this->auth->getUser();
+        if ($user_info['openid'] != '') {  //判断是否绑定过微信
+            $this->error('已经绑定过微信');
+        }
+        //判断openid 是否存在 TODO
+//
+//        $headerpic_path = 'headerpic_' . uniqid() . rand(10000, 99999) . '.png';
+//        download($param['portrait'], $headerpic_path);
+//        $result = (new Oss())->upload('user/' . $headerpic_path, $headerpic_path);
+//        $userInfo['portrait'] = $result ? config('aliyun.OSS_BUCKET_DOMAIN') . '/user/' . $headerpic_path : '';
+//        unlink($headerpic_path);
+        $result = 1;
+        if ($result) {
+            $this->success('绑定成功！');
+        } else {
+            $this->success('绑定失败');
         }
     }
 }

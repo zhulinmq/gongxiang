@@ -111,7 +111,7 @@ class Auth
                 $this->setError('Account is locked');
                 return false;
             }
-            $this->_user = $user;
+            $this->_user = $user_info;
             $this->_logined = true;
             $this->_token = $token;
 

@@ -7,6 +7,8 @@ use app\common\controller\Api;
 use app\common\library\Ems;
 use app\common\library\Sms;
 use fast\Random;
+use Flc\Dysms\Client;
+use Flc\Dysms\Request\SendSms;
 use think\Validate;
 
 /**
@@ -58,33 +60,32 @@ class User extends Api
      */
     public function sendsms()
     {
-
         $config = [
             'accessKeyId' => 'LTAI0RVoIszOewtn',
             'accessKeySecret' => '0JXQOAP9nvFx5M9qYQo9dfj17cHtiL',
         ];
-        $mobile = $this->request->request('mobile');
-        $send_type = $this->request->request('send_type');
+        $phone = $this->request->request('mobile');
         $client = new Client($config);
         $sendSms = new SendSms;
-        $sendSms->setPhoneNumbers($mobile);
+        $sendSms->setPhoneNumbers($phone);
         $sendSms->setSignName('中斌影视俱乐部');
         $sendSms->setTemplateCode('SMS_168260296');
 //        $sendSms->setTemplateParam(['code' => $code]);
         $sendSms->setOutId(time() . rand(100, 999));
 
-//        $k = $mobile . date('Y-m-d');
-//        $count = Redis::get($k);
-//        if ($count > 30) {
-//            return;
-//        }
-//        Redis::incr($k);
-//        if ($count == 0) {
-//            Redis::expire($k, 23 * 60 * 60);
-//        }
+        $k = $phone . date('Y-m-d');
+        $count = Redis::get($k);
+        if ($count > 30) {
+            return;
+        }
+        Redis::incr($k);
+        if ($count == 0) {
+            Redis::expire($k, 23 * 60 * 60);
+        }
+
         $res = $client->execute($sendSms);
 
-        print_r($res);
+        pirnt_r($res);
     }
 
     /**
@@ -171,7 +172,7 @@ class User extends Api
             $this->error(__('Mobile is incorrect'));
         }
         //验证手机验证码
-        $errMsg = check_verification_code($mobile, $code, 1, true);
+        $errMsg = check_verification_code($mobile, $code, 'register', true);
         if (!empty($errMsg)) {
             $this->error($errMsg);
         }
@@ -208,7 +209,7 @@ class User extends Api
         $username = $this->request->request('username');
         $avatar = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
         if ($username) {
-            $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $this->auth->id)->find();
+            $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $user['id'])->find();
             if ($exists) {
                 $this->error(__('Username already exists'));
             }

@@ -1,2 +1,2 @@
 <?php
-echo  shell_exec('ls -la');
+echo "test is OK";

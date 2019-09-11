@@ -2,6 +2,7 @@
 
 namespace app\api\controller;
 
+use AliSend\AliSendSms;
 use app\common\controller\Api;
 use app\common\library\Sms as Smslib;
 use app\common\model\User;

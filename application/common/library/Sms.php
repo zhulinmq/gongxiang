@@ -2,6 +2,7 @@
 
 namespace app\common\library;
 
+use AliSend\AliSendSms;
 use think\Hook;
 
 /**
@@ -25,8 +26,8 @@ class Sms
     /**
      * 获取最后一次手机发送的数据
      *
-     * @param   int    $mobile 手机号
-     * @param   string $event  事件
+     * @param   int $mobile 手机号
+     * @param   string $event 事件
      * @return  Sms
      */
     public static function get($mobile, $event = 'default')
@@ -42,9 +43,9 @@ class Sms
     /**
      * 发送验证码
      *
-     * @param   int    $mobile 手机号
-     * @param   int    $code   验证码,为空时将自动生成4位数字
-     * @param   string $event  事件
+     * @param   int $mobile 手机号
+     * @param   int $code 验证码,为空时将自动生成4位数字
+     * @param   string $event 事件
      * @return  boolean
      */
     public static function send($mobile, $code = null, $event = 'default')
@@ -52,8 +53,19 @@ class Sms
         $code = is_null($code) ? mt_rand(1000, 9999) : $code;
         $time = time();
         $ip = request()->ip();
-        $sms = \app\common\model\Sms::create(['event' => $event, 'mobile' => $mobile, 'code' => $code, 'ip' => $ip, 'createtime' => $time]);
-        $result = Hook::listen('sms_send', $sms, null, true);
+        $expire_time = 60 * 5;
+        $sms = \app\common\model\Sms::create([
+            'event' => $event,
+            'mobile' => $mobile,
+            'code' => $code,
+            'ip' => $ip,
+            'createtime' => $time,
+            'expire_time' => $time + $expire_time
+        ]);
+        $aliSendSms = new AliSendSms();
+        $templete['code'] = $code;
+        $result = $aliSendSms->send($mobile, $templete, $event);
+        //        $result = Hook::listen('sms_send', $sms, null, true);
         if (!$result) {
             $sms->delete();
             return false;
@@ -64,16 +76,16 @@ class Sms
     /**
      * 发送通知
      *
-     * @param   mixed  $mobile   手机号,多个以,分隔
-     * @param   string $msg      消息内容
+     * @param   mixed $mobile 手机号,多个以,分隔
+     * @param   string $msg 消息内容
      * @param   string $template 消息模板
      * @return  boolean
      */
     public static function notice($mobile, $msg = '', $template = null)
     {
         $params = [
-            'mobile'   => $mobile,
-            'msg'      => $msg,
+            'mobile' => $mobile,
+            'msg' => $msg,
             'template' => $template
         ];
         $result = Hook::listen('sms_notice', $params, null, true);
@@ -83,9 +95,9 @@ class Sms
     /**
      * 校验验证码
      *
-     * @param   int    $mobile 手机号
-     * @param   int    $code   验证码
-     * @param   string $event  事件
+     * @param   int $mobile 手机号
+     * @param   int $code 验证码
+     * @param   string $event 事件
      * @return  boolean
      */
     public static function check($mobile, $code, $event = 'default')
@@ -118,8 +130,8 @@ class Sms
     /**
      * 清空指定手机号验证码
      *
-     * @param   int    $mobile 手机号
-     * @param   string $event  事件
+     * @param   int $mobile 手机号
+     * @param   string $event 事件
      * @return  boolean
      */
     public static function flush($mobile, $event = 'default')

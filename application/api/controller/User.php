@@ -55,58 +55,6 @@ class User extends Api
         }
     }
 
-    /**
-     * 发送手机验证码
-     */
-    public function sendsms()
-    {
-        $config = [
-            'accessKeyId' => 'LTAI0RVoIszOewtn',
-            'accessKeySecret' => '0JXQOAP9nvFx5M9qYQo9dfj17cHtiL',
-        ];
-        $phone = $this->request->request('mobile');
-        $client = new Client($config);
-        $sendSms = new SendSms;
-        $sendSms->setPhoneNumbers($phone);
-        $sendSms->setSignName('中斌影视俱乐部');
-        $sendSms->setTemplateCode('SMS_168260296');
-//        $sendSms->setTemplateParam(['code' => $code]);
-        $sendSms->setOutId(time() . rand(100, 999));
-
-        $k = $phone . date('Y-m-d');
-        $count = Redis::get($k);
-        if ($count > 30) {
-            return;
-        }
-        Redis::incr($k);
-        if ($count == 0) {
-            Redis::expire($k, 23 * 60 * 60);
-        }
-
-        $res = $client->execute($sendSms);
-
-        pirnt_r($res);
-    }
-
-    /**
-     * 验证手机验证码
-     * use: register(注册) changepwd(修改密码)
-     */
-    public function checksms()
-    {
-        $mobile = $this->request->request('mobile');
-        $use = $this->request->request('use');
-        $code = $this->request->request('code');
-
-        if (!$mobile || !$use || !$code) {
-            $this->error(__('Invalid parameters'));
-        }
-        if (!Sms::check($mobile, $code, 'changepwd')) {
-            $this->error(__('Captcha is incorrect'));
-        }
-        $this->success('success');
-
-    }
 
     /**
      * 手机验证码登录
@@ -156,18 +104,13 @@ class User extends Api
      */
     public function register()
     {
-//        $username = $this->request->request('username');
         $mobile = $this->request->request('mobile');
         $password = $this->request->request('password');
-//        $email = $this->request->request('email');
         $code = $this->request->request('code');
         $username = $mobile; //默认用户名为手机号
-//        if (!$username || !$password) {
-//            $this->error(__('Invalid parameters'));
-//        }
-//        if ($email && !Validate::is($email, "email")) {
-//            $this->error(__('Email is incorrect'));
-//        }
+        if (!$mobile || !$password) {
+            $this->error(__('Invalid parameters'));
+        }
         if ($mobile && !Validate::regex($mobile, "^1\d{10}$")) {
             $this->error(__('Mobile is incorrect'));
         }
@@ -213,11 +156,11 @@ class User extends Api
             if ($exists) {
                 $this->error(__('Username already exists'));
             }
-            $user->username = $username;
+            $exists->username = $username;
         }
-        $user->avatar = $avatar;
-        $user->save();
-        $this->success();
+        $exists->avatar = $avatar;
+        $exists->save();
+        $exists->success();
     }
 
     /**

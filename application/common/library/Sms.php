@@ -114,7 +114,8 @@ class Sms
                     $sms->save();
                     return false;
                 } else {
-                    $result = Hook::listen('sms_check', $sms, null, true);
+//                    $result = Hook::listen('sms_check', $sms, null, true);
+                    $result = true;
                     return $result;
                 }
             } else {

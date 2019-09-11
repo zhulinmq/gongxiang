@@ -16,7 +16,7 @@ use think\Validate;
  */
 class User extends Api
 {
-    protected $noNeedLogin = ['login', 'mobilelogin', 'register', 'resetpwd', 'changeemail', 'changemobile', 'third', 'sendsms', 'checksms'];
+    protected $noNeedLogin = ['login', 'mobilelogin', 'register', 'resetpwd', 'changeemail', 'changemobile', 'third'];
     protected $noNeedRight = '*';
 
     public function _initialize()
@@ -272,41 +272,24 @@ class User extends Api
      */
     public function resetpwd()
     {
-        $type = $this->request->request("type");
         $mobile = $this->request->request("mobile");
-        $email = $this->request->request("email");
         $newpassword = $this->request->request("newpassword");
-        $captcha = $this->request->request("captcha");
+        $captcha = $this->request->request("code");
         if (!$newpassword || !$captcha) {
             $this->error(__('Invalid parameters'));
         }
-        if ($type == 'mobile') {
-            if (!Validate::regex($mobile, "^1\d{10}$")) {
-                $this->error(__('Mobile is incorrect'));
-            }
-            $user = \app\common\model\User::getByMobile($mobile);
-            if (!$user) {
-                $this->error(__('User not found'));
-            }
-            $ret = Sms::check($mobile, $captcha, 'resetpwd');
-            if (!$ret) {
-                $this->error(__('Captcha is incorrect'));
-            }
-            Sms::flush($mobile, 'resetpwd');
-        } else {
-            if (!Validate::is($email, "email")) {
-                $this->error(__('Email is incorrect'));
-            }
-            $user = \app\common\model\User::getByEmail($email);
-            if (!$user) {
-                $this->error(__('User not found'));
-            }
-            $ret = Ems::check($email, $captcha, 'resetpwd');
-            if (!$ret) {
-                $this->error(__('Captcha is incorrect'));
-            }
-            Ems::flush($email, 'resetpwd');
+        if (!Validate::regex($mobile, "^1\d{10}$")) {
+            $this->error(__('Mobile is incorrect'));
         }
+        $user = \app\common\model\User::getByMobile($mobile);
+        if (!$user) {
+            $this->error(__('User not found'));
+        }
+        $ret = Sms::check($mobile, $captcha, 'changepwd');
+        if (!$ret) {
+            $this->error(__('Captcha is incorrect'));
+        }
+        Sms::flush($mobile, 'changepwd');
         //模拟一次登录
         $this->auth->direct($user->id);
         $ret = $this->auth->changepwd($newpassword, '', true);

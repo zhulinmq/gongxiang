@@ -47,13 +47,6 @@ class User extends Model
         return $value;
     }
 
-    /**
-     * 获取会员的组别
-     */
-    public function getGroupAttr($value, $data)
-    {
-        return UserGroup::get($data['group_id']);
-    }
 
     /**
      * 获取验证字段数组值

@@ -316,7 +316,6 @@ class User extends Api
             $this->error('已经绑定过微信');
         }
         //判断openid 是否存在 TODO
-//
 //        $headerpic_path = 'headerpic_' . uniqid() . rand(10000, 99999) . '.png';
 //        download($param['portrait'], $headerpic_path);
 //        $result = (new Oss())->upload('user/' . $headerpic_path, $headerpic_path);
@@ -329,4 +328,6 @@ class User extends Api
             $this->success('绑定失败');
         }
     }
+
+
 }

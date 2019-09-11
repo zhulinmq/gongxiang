@@ -7,7 +7,7 @@ if (!function_exists('__')) {
     /**
      * 获取语言变量值
      * @param string $name 语言变量名
-     * @param array  $vars 动态变量值
+     * @param array $vars 动态变量值
      * @param string $lang 语言
      * @return mixed
      */
@@ -29,7 +29,7 @@ if (!function_exists('format_bytes')) {
 
     /**
      * 将字节转换为可读文本
-     * @param int    $size      大小
+     * @param int $size 大小
      * @param string $delimiter 分隔符
      * @return string
      */
@@ -47,7 +47,7 @@ if (!function_exists('datetime')) {
 
     /**
      * 将时间戳转换为日期时间
-     * @param int    $time   时间戳
+     * @param int $time 时间戳
      * @param string $format 日期时间格式
      * @return string
      */
@@ -62,7 +62,7 @@ if (!function_exists('human_date')) {
 
     /**
      * 获取语义化时间
-     * @param int $time  时间
+     * @param int $time 时间
      * @param int $local 本地时间
      * @return string
      */
@@ -76,7 +76,7 @@ if (!function_exists('cdnurl')) {
 
     /**
      * 获取上传资源的CDN的地址
-     * @param string  $url    资源相对地址
+     * @param string $url 资源相对地址
      * @param boolean $domain 是否显示域名 或者直接传入域名
      * @return string
      */
@@ -126,8 +126,8 @@ if (!function_exists('rmdirs')) {
 
     /**
      * 删除文件夹
-     * @param string $dirname  目录
-     * @param bool   $withself 是否删除自身
+     * @param string $dirname 目录
+     * @param bool $withself 是否删除自身
      * @return boolean
      */
     function rmdirs($dirname, $withself = true)
@@ -156,7 +156,7 @@ if (!function_exists('copydirs')) {
     /**
      * 复制文件夹
      * @param string $source 源文件夹
-     * @param string $dest   目标文件夹
+     * @param string $dest 目标文件夹
      */
     function copydirs($source, $dest)
     {
@@ -192,7 +192,7 @@ if (!function_exists('addtion')) {
 
     /**
      * 附加关联字段数据
-     * @param array $items  数据列表
+     * @param array $items 数据列表
      * @param mixed $fields 渲染的来源字段
      * @return array
      */
@@ -264,7 +264,7 @@ if (!function_exists('var_export_short')) {
 
     /**
      * 返回打印数组结构
-     * @param string $var    数组
+     * @param string $var 数组
      * @param string $indent 缩进字符
      * @return string
      */
@@ -360,5 +360,66 @@ if (!function_exists('hsv2rgb')) {
             floor($g * 255),
             floor($b * 255)
         ];
+    }
+}
+
+/**
+ * 文件下载
+ * @param  [type] $url  [下载链接包含协议]
+ * @param  [type] $absolute_path [本地绝对路径包含扩展名]
+ * @return [type]       [description]
+ */
+if (!function_exists('download')) {
+    function download($url, $path)
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+        $file = curl_exec($ch);
+        curl_close($ch);
+        $resource = fopen($path, 'a');
+        fwrite($resource, $file);
+        fclose($resource);
+    }
+}
+
+if (!function_exists('check_verification_code')) {
+
+    /**
+     * 手机验证码检查，验证完后销毁验证码增加安全性,返回true验证码正确，false验证码错误
+     * @param string $account 手机
+     * @param string $code 验证码
+     * @param $int $scene 验证码应用场景
+     * @param boolean $clear 是否验证后销毁验证码
+     * @return string  错误消息,空字符串代码验证码正确
+     * @return string
+     * @throws \think\Exception
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     * @throws \think\exception\PDOException
+     */
+    function check_verification_code($account, $code, $scene = '', $clear = false)
+    {
+        $findVerificationCode = \think\Db::name('sms')->where(['mobile' => $account, 'code' => $code, 'event' => $scene, 'is_used' => 0])->find();
+
+        if ($findVerificationCode) {
+            if ($findVerificationCode['expire_time'] > time()) {
+
+                if ($code == $findVerificationCode['code']) {
+                    if ($clear) {
+                        \think\Db::name('sms')->where(['mobile' => $account, 'code' => $code, 'event' => $scene])->update(['is_used' => '1']);
+                    }
+                } else {
+                    return "验证码不正确!";
+                }
+            } else {
+                return "验证码已经过期,请先获取验证码!";
+            }
+        } else {
+            return "请先获取手机验证码!";
+        }
+        return "";
     }
 }

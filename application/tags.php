@@ -18,6 +18,7 @@ return [
     // 模块初始化
     'module_init'  => [
         'app\\common\\behavior\\Common',
+        'app\\common\\behavior\\CORS'
     ],
     // 插件开始
     'addon_begin'  => [

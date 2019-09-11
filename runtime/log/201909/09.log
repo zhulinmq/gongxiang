@@ -2448,3 +2448,45 @@
 [ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '94a2d5cef0c2cd04b0cc96af9a079d065b424f27' LIMIT 1 [ RunTime:0.000334s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000949s ]
 [ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2019-09-09T22:41:42+08:00 ] 49.90.196.170 POST 139.199.164.132:2000/api/user/index
+[运行时间：0.067429s] [吞吐率：14.83req/s] [内存消耗：4,650.16kb] [文件加载：128]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001069s ]
+[ info ] [ LANG ] /www/wwwroot/gongxiang/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'token' => '4f735641-bab7-4644-9777-2ce5ff3613c1',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '589a29c1-62e4-4b6e-982b-46316270a791',
+  'host' => '139.199.164.132:2000',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.007751s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /www/wwwroot/gongxiang/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->index[ /www/wwwroot/gongxiang/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000396s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_token` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_token` WHERE  `token` = '94a2d5cef0c2cd04b0cc96af9a079d065b424f27' LIMIT 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.011412s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000533s ]

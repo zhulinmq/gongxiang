@@ -51,6 +51,17 @@ class User extends Model
                 MoneyLog::create(['user_id' => $row['id'], 'money' => $changedata['money'] - $origin['money'], 'before' => $origin['money'], 'after' => $changedata['money'], 'memo' => '管理员变更金额']);
             }
         });
+
+        /**
+         * 变更设备记录
+         */
+        self::beforeUpdate(function ($row) {
+            $changedata = $row->getChangedData();
+            if (isset($changedata['device_num'])) {
+                $origin = $row->getOriginData();
+                MoneyLog::create(['user_id' => $row['id'], 'device_num' => $changedata['device_num'] - $origin['device_num'], 'before' => $origin['device_num'], 'after' => $changedata['device_num'], 'memo' => '管理员变更设备数量']);
+            }
+        });
     }
 
     public function getGenderList()

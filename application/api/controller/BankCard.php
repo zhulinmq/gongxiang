@@ -37,7 +37,7 @@ class BankCard extends Api
             'idcard' => $idcard,
             'bank_card_number' => $bank_card_number,
             'bank_name' => $bank_name,
-            'reserved_mobile' => $reserved_mobile,
+            'reserved_m   obile' => $reserved_mobile,
         ];
         $result = \app\common\model\BankCard::create($data, true);
         if ($result) {

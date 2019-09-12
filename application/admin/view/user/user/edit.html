@@ -1,11 +1,4 @@
 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
-
-    <div class="form-group">
-        <label for="c-group_id" class="control-label col-xs-12 col-sm-2">{:__('Group')}:</label>
-        <div class="col-xs-12 col-sm-4">
-            {$groupList}
-        </div>
-    </div>
     <div class="form-group">
         <label for="c-username" class="control-label col-xs-12 col-sm-2">{:__('Username')}:</label>
         <div class="col-xs-12 col-sm-4">
@@ -13,21 +6,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="c-nickname" class="control-label col-xs-12 col-sm-2">{:__('Nickname')}:</label>
-        <div class="col-xs-12 col-sm-4">
-            <input id="c-nickname" data-rule="required" class="form-control" name="row[nickname]" type="text" value="{$row.nickname|htmlentities}">
-        </div>
-    </div>
-    <div class="form-group">
         <label for="c-password" class="control-label col-xs-12 col-sm-2">{:__('Password')}:</label>
         <div class="col-xs-12 col-sm-4">
             <input id="c-password" data-rule="password" class="form-control" name="row[password]" type="text" value="" placeholder="{:__('Leave password blank if dont want to change')}" autocomplete="new-password" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-email" class="control-label col-xs-12 col-sm-2">{:__('Email')}:</label>
-        <div class="col-xs-12 col-sm-4">
-            <input id="c-email" data-rule="" class="form-control" name="row[email]" type="text" value="{$row.email|htmlentities}">
         </div>
     </div>
     <div class="form-group">
@@ -50,30 +31,7 @@
             <ul class="row list-inline plupload-preview" id="p-avatar"></ul>
         </div>
     </div>
-    <div class="form-group">
-        <label for="c-level" class="control-label col-xs-12 col-sm-2">{:__('Level')}:</label>
-        <div class="col-xs-12 col-sm-4">
-            <input id="c-level" data-rule="required" class="form-control" name="row[level]" type="number" value="{$row.level}">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-gender" class="control-label col-xs-12 col-sm-2">{:__('Gender')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            {:build_radios('row[gender]', ['1'=>__('Male'), '0'=>__('Female')], $row['gender'])}
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-birthday" class="control-label col-xs-12 col-sm-2">{:__('Birthday')}:</label>
-        <div class="col-xs-12 col-sm-4">
-            <input id="c-birthday" data-rule="" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[birthday]" type="text" value="{$row.birthday}">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="c-bio" class="control-label col-xs-12 col-sm-2">{:__('Bio')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-bio" data-rule="" class="form-control" name="row[bio]" type="text" value="{$row.bio|htmlentities}">
-        </div>
-    </div>
+
     <div class="form-group">
         <label for="c-money" class="control-label col-xs-12 col-sm-2">{:__('Money')}:</label>
         <div class="col-xs-12 col-sm-4">
@@ -84,6 +42,12 @@
         <label for="c-score" class="control-label col-xs-12 col-sm-2">{:__('Score')}:</label>
         <div class="col-xs-12 col-sm-4">
             <input id="c-score" data-rule="required" class="form-control" name="row[score]" type="number" value="{$row.score}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-device_num" class="control-label col-xs-12 col-sm-2">设备数量:</label>
+        <div class="col-xs-12 col-sm-4">
+            <input id="c-device_num" data-rule="required" class="form-control" name="row[device_num]" type="number" value="{$row.device_num}">
         </div>
     </div>
     <div class="form-group">

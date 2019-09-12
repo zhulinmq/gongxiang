@@ -12,7 +12,7 @@ use app\common\controller\Backend;
 class User extends Backend
 {
 
-    protected $relationSearch = true;
+    protected $relationSearch = false;
 
 
     /**
@@ -40,12 +40,12 @@ class User extends Backend
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                ->with('group')
+//                ->with('group')
                 ->where($where)
                 ->order($sort, $order)
                 ->count();
             $list = $this->model
-                ->with('group')
+//                ->with('group')
                 ->where($where)
                 ->order($sort, $order)
                 ->limit($offset, $limit)
@@ -68,7 +68,8 @@ class User extends Backend
         $row = $this->model->get($ids);
         if (!$row)
             $this->error(__('No Results were found'));
-        $this->view->assign('groupList', build_select('row[group_id]', \app\admin\model\UserGroup::column('id,name'), $row['group_id'], ['class' => 'form-control selectpicker']));
+
+//        $this->view->assign('groupList', build_select('row[group_id]', \app\admin\model\UserGroup::column('id,name'), $row['group_id'], ['class' => 'form-control selectpicker']));
         return parent::edit($ids);
     }
 

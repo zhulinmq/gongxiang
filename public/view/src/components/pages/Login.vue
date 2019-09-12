@@ -66,13 +66,14 @@
                     return
                 }
                 apiAddress.login(data).then((result)=>{
-                    if(result.code==200){
-                        this.$store.state.loginInfo=result.data.userinfo;
+                    if(result.code==1){
+                        
                         this.$toast({
                             message: "登录成功",
                             position:"bottom"
                         })
-                        localStorage.setItem("loginInfo",JSON.stringify(result.data))
+                        this.$store.state.loginInfo=result.data.userinfo;
+                        localStorage.setItem("loginInfo",JSON.stringify(result.data.userinfo))
                         this.$router.push({
                             name:"main"
                         })

@@ -7,13 +7,13 @@
                     <div class="inputMobile display_csb mt20">
                         <div class="display_cfs">
                             <!-- <div class="name">手机号</div> -->
-                            <input type="text" v-model="newPassword" placeholder="新密码" class="inpuClass">
+                            <input type="password" v-model="newPassword" placeholder="新密码" class="inpuClass">
                         </div>
                     </div>
                     <div class="inputMobile display_csb">
                         <div class="display_cfs">
                             <!-- <div class="name">验证码</div> -->
-                            <input type="text" v-model="repassword" placeholder="确认密码" class="inpuClass">
+                            <input type="password" v-model="repassword" placeholder="确认密码" class="inpuClass">
                         </div>
                     </div>
                 </div>
@@ -36,20 +36,60 @@ import {apiAddress} from "@/utils/apiAddress"
                 mobile:""
             }
         },
+        created(){
+            this.mobile=this.$route.query.mobile;
+            this.captcha=this.$route.query.code
+        },
         methods:{
             editSave(){
                 //保存修改
                 let data={
                     mobile:this.mobile,
-                    newpassword:this.newpassword,
+                    newpassword:this.newPassword,
                     captcha:this.captcha
                 }
+                let isMobile=commmon.checkMobile(this.mobile)
+                if(!isMobile){
+                    this.$toast({
+                        message: "手机号码格式不正确！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                if(!this.captcha){
+                    this.$toast({
+                        message: "验证码不能为空！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                if(!this.repassword){
+                    this.$toast({
+                        message: "密码不能为空！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                if(this.repassword!=this.newPassword){
+                    this.$toast({
+                        message: "两次输入的密码不一样！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                console.log(data)
                 apiAddress.resetpwd(data).then((result)=>{
-                    if(result.code==200){
+                    if(result.code==1){
                         this.$toast({
                             message:"修改成功",
                             position:"bottom"
                         })
+                        this.$route.push({name:"login"})
+                    }else{
+                        this.$toast({
+                            message:result.msg,
+                            position:"bottom"
+                        }) 
                     }
                 })
             },

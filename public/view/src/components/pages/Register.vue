@@ -85,15 +85,20 @@
                 }
                 console.log(data)
                 apiAddress.register(data).then((result)=>{
-                    if(result.code==200){
+                    if(result.code==1){
                         this.$store.state.loginInfo=result.data.userinfo;
                         this.$toast({
                             message: "注册成功",
                             position:"bottom"
                         })
-                        localStorage.setItem("loginInfo",JSON.stringify(result.data))
+                        localStorage.setItem("loginInfo",JSON.stringify(result.data.userinfo))
                         this.$router.push({
                             name:"main"
+                        })
+                    }else{
+                        this.$toast({
+                            message: result.msg,
+                            position:"bottom"
                         })
                     }
                 })
@@ -116,10 +121,8 @@
                 this.sending = false;
                 this.disabled = true;
                 this.timeDown();
-                console.log(data)
                 apiAddress.sendsms(data).then((result)=>{ 
-                    console.log(result)
-                    if(result.code==200){
+                    if(result.code==1){
                         this.$toast({
                             message:"发送成功",
                             position:"bottom"

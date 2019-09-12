@@ -1,7 +1,6 @@
 import axios from "axios";
 import Qs from 'qs'
-axios.defaults.withCredentials = false
-axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 const http = {
     /**
      * get方法，对应get请求
@@ -47,6 +46,30 @@ const http = {
      * @param {Object} params [请求时携带的参数]
      */
     post: function(url, params) {
+        return new Promise((resolve, reject) => {
+            axios
+                .post(url + "?" + Qs.stringify(params))
+                .then(res => {
+                    resolve(res.data);
+                })
+                .catch(err => {
+                    reject(err.data);
+                });
+        });
+    },
+    postJson: function(url, params) {
+        return new Promise((resolve, reject) => {
+            axios
+                .post(url, params)
+                .then(res => {
+                    resolve(res.data);
+                })
+                .catch(err => {
+                    reject(err.data);
+                });
+        });
+    },
+    postNone: function(url, params) {
         return new Promise((resolve, reject) => {
             axios
                 .post(url, params)

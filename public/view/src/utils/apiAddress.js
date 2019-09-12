@@ -17,7 +17,7 @@ const apiAddress = {
      */
     getUserIndex(data) {
         //会员中心
-        return http.post(url + "/user/index", data)
+        return http.postNone(url + "/user/index", data)
     },
     /**
      *  mobile:手机号

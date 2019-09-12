@@ -210,7 +210,7 @@
         margin-top: pxTorem(20px)
     }
     .bottom{
-        margin-top: pxTorem(20px);
+        margin-top: pxTorem(65px);
         .borderRight{
             border-right:solid 1px #eee;
         }

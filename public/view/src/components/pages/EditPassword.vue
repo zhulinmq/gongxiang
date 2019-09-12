@@ -42,7 +42,8 @@
         },
         methods:{
             getCode(){
-                let phone=this.phone;
+                let phone=this.mobile;
+                
                 let isMobile=commmon.checkMobile(phone)
                 if(!isMobile){
                     this.$toast({
@@ -60,11 +61,16 @@
                 this.timeDown();
                 
                 apiAddress.sendsms(data).then((result)=>{  
-                    if(result.code="success"){
+                    if(result.code==1){
                         this.$toast({
                             message:"发送成功",
                             position:"bottom"
                         })
+                    }else{
+                       this.$toast({
+                            message:result.msg,
+                            position:"bottom"
+                        }) 
                     }
                 })
             },
@@ -82,7 +88,22 @@
                 }, 1000);
             },
             nextStep(){
-                this.$router.push({name:"password"})
+                let isMobile=commmon.checkMobile(this.mobile)
+                if(!isMobile){
+                    this.$toast({
+                        message: "手机号码格式不正确！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                if(!this.code){
+                    this.$toast({
+                        message: "验证码不能为空！",
+                        position:"bottom"
+                    })
+                    return
+                }
+                this.$router.push({name:"password",query:{mobile:this.mobile,code:this.code}})
             },
             resizepage() {
                 document.getElementsByTagName("html")[0].style.height =

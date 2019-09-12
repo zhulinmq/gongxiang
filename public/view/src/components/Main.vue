@@ -80,7 +80,7 @@
             getUserInfo(){
                 //获取会员中心
                 apiAddress.getUserIndex({}).then((result)=>{
-                    if(result.code==200){
+                    if(result.code==1){
                         this.userInfo=result.data
                     }
                 })

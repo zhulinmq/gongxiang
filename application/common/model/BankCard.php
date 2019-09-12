@@ -20,7 +20,10 @@ class BankCard extends Model
 
     public static function getList($user_id)
     {
-        return self::where('user_id', $user_id)->field('bank_card_number,bank_name')->select();
+        return self::where('user_id', $user_id)->field('bank_card_number,bank_name,bank_code')->select();
+    }
+    public static function info($where){
+        return self::where($where)->find();
     }
 
 }

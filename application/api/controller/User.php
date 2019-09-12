@@ -329,5 +329,35 @@ class User extends Api
         }
     }
 
+    /**
+     * 去提现
+     */
+    public function towithdraw()
+    {
+        $user = $this->auth->getUser();
+        $bank_info = \app\common\model\BankCard::info(['user_id' => $this->auth->id, 'is_default' => 1]);
+        $data['bank_info'] = $bank_info['bank_name'] . '(' . substr($bank_info['bank_card_number'], -4) . ')';
+        $data['bank_icon'] = '/assets/bank_icon/' . $bank_info['bank_code'] . '.png';
+        $data['bank_id'] = $bank_info['id'];
+        $data['max_out'] = $user['money'];
+        $this->success('success！',$data);
+    }
+
+    /**
+     * 申请提现
+     */
+    public function dowithdraw(){
+        $money  =  $this->request->request('money');
+        $bank_id = $this->request->request('bank_id');
+        if(!$money || !$bank_id){
+            $this->error(__('Invalid parameters'));
+        }
+        $data = [
+            'bank_id' => $bank_id,
+            'money' => $money
+        ];
+        
+
+    }
 
 }

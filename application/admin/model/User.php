@@ -2,6 +2,7 @@
 
 namespace app\admin\model;
 
+use app\common\model\DeviceLog;
 use app\common\model\MoneyLog;
 use think\Model;
 
@@ -59,7 +60,7 @@ class User extends Model
             $changedata = $row->getChangedData();
             if (isset($changedata['device_num'])) {
                 $origin = $row->getOriginData();
-                MoneyLog::create(['user_id' => $row['id'], 'device_num' => $changedata['device_num'] - $origin['device_num'], 'before' => $origin['device_num'], 'after' => $changedata['device_num'], 'memo' => '管理员变更设备数量']);
+                DeviceLog::create(['user_id' => $row['id'], 'device_num' => $changedata['device_num'] - $origin['device_num'], 'before' => $origin['device_num'], 'after' => $changedata['device_num'], 'memo' => '管理员变更设备数量']);
             }
         });
     }

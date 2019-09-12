@@ -37,14 +37,24 @@ class BankCard extends Api
             'idcard' => $idcard,
             'bank_card_number' => $bank_card_number,
             'bank_name' => $bank_name,
-            'reserved_m   obile' => $reserved_mobile,
+            'reserved_mobile' => $reserved_mobile,
+            'is_default' => 1
         ];
-        $result = \app\common\model\BankCard::create($data, true);
-        if ($result) {
-            $this->success('绑定成功');
-        } else {
-            $this->error('绑定失败');
+        Db::startTrans();
+        try {
+            \app\common\model\BankCard::update(['is_default' => 0], ['user_id' => $this->auth->id]);
+            \app\common\model\BankCard::create($data, true);
+            Db::commit();
+        } catch (Exception $e) {
+            $this->setError($e->getMessage());
+            Db::rollback();
+            return false;
         }
+//        if ($result) {
+//            $this->success('绑定成功');
+//        } else {
+//            $this->error('绑定失败');
+//        }
     }
 
     /**
@@ -58,6 +68,7 @@ class BankCard extends Api
             $data[$key]['bank_name'] = $value['bank_name'];
             $data[$key]['bank_full_name'] = $value['bank_name'] . '(' . substr($value['bank_card_number'], -4) . ')';
             $data[$key]['bank_card_number'] = $value['bank_card_number'];
+            $data[$key]['bank_icon'] = '/assets/bank_icon/' . $value['bank_code'] . '.png';
         }
         $this->success($data);
 

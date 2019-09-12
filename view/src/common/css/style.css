@@ -1,0 +1,187 @@
+/*css reset*/
+
+
+/* @import "./mixin.scss"; */
+
+@import './mixin.scss';
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+del,
+em,
+img,
+strong,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    /*width: 100%;*/
+}
+
+html {
+    font-family: “Helvetica Neue”, Helvetica, STHeiTi, Arial, sans-serif, “Microsoft YaHei”, “微软雅黑”;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    font-size: 20px;
+    color: #333;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+address,
+caption,
+cite,
+code,
+i,
+em,
+strong {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    background: transparent;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #333;
+}
+
+a:active {
+    outline: 0;
+}
+
+a:active {
+    color: #006699;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    resize: none;
+}
+
+
+/* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#app {
+    height: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
+#address .swiper-pagination-bullet {
+    display: inline-block;
+    max-width: 4rem;
+    width: auto;
+    height: auto;
+    line-height: 1.5rem;
+    margin-right: 0.75rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0;
+    color: #333;
+    opacity: 1;
+}

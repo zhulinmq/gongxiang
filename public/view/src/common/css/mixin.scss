@@ -67,7 +67,7 @@ $browser-default-font-size: 20px;
             font-size: pxTorem(18px);
             color: #000;
             text-align: center;
-            padding: pxTorem(10px);
+            padding: pxTorem(20px);
         }
         .tip {
             font-size: pxTorem(14px);
@@ -78,7 +78,7 @@ $browser-default-font-size: 20px;
             border-top: pxTorem(1px) solid #dcdcdc;
             width: 100%;
             position: absolute;
-            // bottom: 0;
+            bottom: 0;
             height: pxTorem(44px);
             div {
                 float: left;

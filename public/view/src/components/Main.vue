@@ -121,6 +121,8 @@
             .avtor{
                 width: pxTorem(61px);
                 height: pxTorem(61px);
+                border-radius: 50%;
+                border:0;
             }
             .name_id{
                 color: #ffffff;

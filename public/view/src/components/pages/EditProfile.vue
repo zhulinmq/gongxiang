@@ -170,6 +170,7 @@
                     .avtor{
                         width: pxTorem(40px);
                         height: pxTorem(40px);
+                        border-radius: 50%;
                     }
                     .grey{
                          font-size: pxTorem(13px);
@@ -209,8 +210,15 @@
         height: pxTorem(35px);
         margin-top: pxTorem(20px)
     }
+    .confirm-container .confirm .title{
+        padding: pxTorem(10px);
+    }
+    .confirm-container .confirm .handle{
+        position: relative;
+        
+    }
     .bottom{
-        margin-top: pxTorem(65px);
+        margin-top: pxTorem(20px);
         .borderRight{
             border-right:solid 1px #eee;
         }

@@ -16,9 +16,7 @@ Axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 Axios.interceptors.request.use(
     config => {
         config.withCredentials = false; // 允许携带token ,这个是解决跨域产生的相关问题
-        // if (config.method === 'post') {
-        //     config.data = Qs.stringify(config.data);
-        // }
+
         let userInfo = store.state.loginInfo
 
         if (userInfo.token) {

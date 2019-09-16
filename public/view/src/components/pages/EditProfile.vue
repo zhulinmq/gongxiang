@@ -41,7 +41,7 @@
             <div class="confirm">
                 <div class="title">修改会员名称</div>
                 <div class="handle display_cc">
-                    <input type="text" class="editVip">
+                    <input type="text" class="editVip" v-model="editName">
                 </div>
                 <div class="display_csb bottom">
                     <div class="cancelBtn display_cc borderRight" @click="cancel">取消</div>
@@ -62,7 +62,8 @@
                 showEdit:false,
                 userInfo:{},
                 avatar:"",
-                username:""
+                username:"",
+                editName:""
             }
         },
         created(){
@@ -70,6 +71,7 @@
             this.userInfo=userInfo
             this.avatar=userInfo.avatar
             this.username=userInfo.username
+            this.editName=this.username
         },
         methods:{
             profile(){
@@ -79,9 +81,14 @@
                     username:this.username
                 }
                 apiAddress.profile(data).then((result)=>{
-                    if(result.code==200){
+                    if(result.code==1){
                         this.$toast({
                             message: "修改成功",
+                            position:"bottom"
+                        })
+                    }else{
+                        this.$toast({
+                            message: result.msg,
                             position:"bottom"
                         })
                     }
@@ -91,6 +98,14 @@
                 console.log(file)
             },
             saveConform(){
+                if(!this.editName){
+                    this.$toast({
+                        message:"会员昵称不能为空",
+                        position:"bottom"
+                    })
+                    return
+                }
+                this.username=this.editName;
                 this.showEdit=false
             },
             editVip(){

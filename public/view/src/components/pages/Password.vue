@@ -46,7 +46,7 @@ import {apiAddress} from "@/utils/apiAddress"
                 let data={
                     mobile:this.mobile,
                     newpassword:this.newPassword,
-                    captcha:this.captcha
+                    code:this.captcha
                 }
                 let isMobile=commmon.checkMobile(this.mobile)
                 if(!isMobile){
@@ -77,7 +77,7 @@ import {apiAddress} from "@/utils/apiAddress"
                     })
                     return
                 }
-                console.log(data)
+                
                 apiAddress.resetpwd(data).then((result)=>{
                     if(result.code==1){
                         this.$toast({

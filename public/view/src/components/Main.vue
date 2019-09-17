@@ -25,7 +25,7 @@
             </div>
             <div class="display_cc">
                 <div class="item display_cc three">
-                    <div class="num">99</div>
+                    <div class="num">{{userInfo.money}}</div>
                     <div class="name">可提现</div>
                 </div>
                 <div class="item display_cc four">
@@ -40,11 +40,11 @@
         </div>
         <div class="introduction">
             <div class="title">
-                公司简介
+                {{info.post_title}}
             </div>
             <div class="content">
-                共享陪护床的简介，为不同类型和级别的用户提供相应数据，详细了解床位收益，床位租赁借率等各类指标......
-                <div class="details" @click="goDetails">【详情】</div> 
+                {{info.post_content}}
+                <div class="details" @click="goDetails(info)">【详情】</div> 
             </div>
         </div>
         <div class="bottomNavgation display_csa">
@@ -70,18 +70,29 @@
     export default {
         data() {
             return {
-                userInfo:{}
+                userInfo:{},
+                info:{}
             }
         },
         created(){
-            this.getUserInfo()
+            this.getUserInfo();
+            this.getInfo()
         },
         methods: {
+            getInfo(){
+                apiAddress.articleInfo({}).then((result)=>{
+                    if(result.code==1){
+                        this.info=result.data
+                    }
+                })
+            },
             getUserInfo(){
                 //获取会员中心
                 apiAddress.getUserIndex({}).then((result)=>{
                     if(result.code==1){
-                        this.userInfo=result.data
+                        this.userInfo=result.data.welcome
+                        this.$store.state.userInfo=result.data.welcome
+                        localStorage.setItem("userInfo",result.data.welcome)
                     }
                 })
             },
@@ -94,8 +105,8 @@
             goMyBenefits(){
                 this.$router.push({name:'myBenefits'})
             },
-            goDetails(){
-                this.$router.push({name:'companyProfile'})
+            goDetails(info){
+                this.$router.push({name:'companyProfile',query:{info:JSON.stringify(info)}})
             },
        },
     }

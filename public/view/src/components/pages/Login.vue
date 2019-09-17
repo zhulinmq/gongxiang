@@ -77,6 +77,11 @@
                         this.$router.push({
                             name:"main"
                         })
+                    }else{
+                        this.$toast({
+                            message: result.msg,
+                            position:"bottom"
+                        })
                     }
                 })
             },

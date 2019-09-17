@@ -6,9 +6,12 @@ use addons\third\model\Third;
 use app\common\controller\Api;
 use app\common\library\Ems;
 use app\common\library\Sms;
+use app\common\model\MoneyLog;
+use app\common\model\WithdrawRecord;
 use fast\Random;
 use Flc\Dysms\Client;
 use Flc\Dysms\Request\SendSms;
+use think\Db;
 use think\Validate;
 
 /**
@@ -340,24 +343,87 @@ class User extends Api
         $data['bank_icon'] = '/assets/bank_icon/' . $bank_info['bank_code'] . '.png';
         $data['bank_id'] = $bank_info['id'];
         $data['max_out'] = $user['money'];
-        $this->success('success！',$data);
+        $this->success('success！', $data);
     }
 
     /**
      * 申请提现
      */
-    public function dowithdraw(){
-        $money  =  $this->request->request('money');
+    public function dowithdraw()
+    {
+        $money = $this->request->request('money');
         $bank_id = $this->request->request('bank_id');
-        if(!$money || !$bank_id){
+        if (!$money || !$bank_id) {
             $this->error(__('Invalid parameters'));
         }
         $data = [
             'bank_id' => $bank_id,
-            'money' => $money
+            'money' => $money,
+            'user_id' => $this->auth->id
         ];
-        
+        //提现金额不得少于1元 TODO
+        if ($money < 1) {
+            $this->error('提现金额不能少于1元');
+        }
+        //检测会员对应的银行卡信息
+        $exsit = \app\common\model\BankCard::get(['user_id' => $this->auth->id, 'id' => $bank_id]);
+        if (!$exsit) {
+            $this->error('请选择正确的银行卡');
+        }
+        //判断账户资金是否大于等于提现金额
+        $user = $this->auth->getUser();
+        if ($money > $user['money']) {
+            $this->error('提现金额不能高于账户金额');
+        }
+        if ($money > ($user['money'] - $user['freeze_money'])) {
+            $this->error('部分资金已被冻结，无法提现');
+        }
+        Db::startTrans();
+        try {
+            //插入提现记录表
+            WithdrawRecord::create($data);
+            //冻结资金
+            \app\common\model\User::update(['freeze_money' => $money], ['id' => $this->auth->id]);
+            Db::commit();
+        } catch (PDOException $e) {
+            Db::rollback();
+            return false;
+        }
+        $this->success('success！');
+    }
+
+    /**
+     * 提现记录
+     */
+    public function withdraw_log()
+    {
+        $list = WithdrawRecord::all(['user_id' => $this->auth->id]);
+        $data = [];
+        foreach ($list as $key => $value) {
+            $data[$key]['title'] = '提现';
+            $data[$key]['money'] = $value['money'];
+            $data[$key]['createtime'] = date('Y-m-d H:i:s', $value['createtime']);
+            $data[$key]['status'] = $value['status'] == 0 ? '审核中' : ($value['status'] == 1 ? '提现成功' : '申请失败');
+        }
+        $this->success('success', $data);
+    }
+
+    /**
+     * 累计收益
+     */
+    public function income()
+    {
+
+        $data['total_income'] = MoneyLog::money_info(['user_id' => $this->auth->id]);
+        $list = MoneyLog::all(['user_id' => $this->auth->id]);
+        foreach ($list as $key => $value) {
+            $data['list'][$key]['money'] = $value['money'];
+            $data['list'][$key]['createtime'] = date('Y-m-d H:i:s', $value['createtime']);;
+        }
+
+        $this->success('success', $data);
 
     }
+
 
 }

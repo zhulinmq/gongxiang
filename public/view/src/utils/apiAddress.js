@@ -85,6 +85,53 @@ const apiAddress = {
     profile(data) {
         //修改会员信息
         return http.post(url + "/user/profile", data)
+    },
+    /**
+     * token
+     * @param {*} data 
+     */
+    bankcardList(data) {
+        //银行卡列表
+        return http.postNone(url + "/bank_card/index", data)
+    },
+    /**
+     * cardholder	
+        [string]	是	持卡人姓名	
+        idcard	
+        [string]	是	身份证	
+        bank_card_number	
+        [string]	是	银行卡号	
+        bank_name	
+        [string]	是	开户行	
+        reserved_mobile	
+        [int]	是	银行预留手机号	
+        bank_code复制
+        [string]	是	银行CODE
+     * @param {*} data 
+     */
+    bindBankcard(data) {
+        //绑定银行卡
+        return http.post(url + "/bankcard/bind", data)
+    },
+    /**
+     * 
+     * @param {*} data 
+     */
+    towithdraw(data) {
+        //提现
+        return http.post(url + "/user/towithdraw", data)
+    },
+    articleInfo(data) {
+        //获取公司简介
+        return http.postNone(url + "/article/info", data)
+    },
+    income(data) {
+        //我的收益
+        return http.postNone(url + "/user/income", data)
+    },
+    withdraw_log(data) {
+        //提现记录
+        return http.postNone(url + "/user/withdraw_log", data)
     }
 }
 export { apiAddress }

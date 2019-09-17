@@ -20,4 +20,10 @@ class MoneyLog Extends Model
     // 追加属性
     protected $append = [
     ];
+
+    public static function money_info($where)
+    {
+        return self::where($where)->sum('money');
+
+    }
 }

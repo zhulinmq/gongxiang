@@ -4,30 +4,47 @@
         <div class="myBenefitsView">
             <div class="fram display_ccfc">
                 <div class="title">你已经累计赚得</div>
-                <div class="num">¥11111</div>
+                <div class="num">¥{{income.total_income}}</div>
             </div>
         </div>
-        <div class="line"></div>
+        <div v-for="(item,index) in income.list" :key="index">
+            <div class="line"></div>
+            <div class="details display_csb">
+                <div>{{item.createtime}}</div>
+                <div>{{item.money}}</div>
+            </div>
+        </div>
+        
+        <!-- <div class="line"></div>
         <div class="details display_csb">
             <div>2019-08-09</div>
             <div>200</div>
-        </div>
-        <div class="line"></div>
-        <div class="details display_csb">
-            <div>2019-08-09</div>
-            <div>200</div>
-        </div>
+        </div> -->
         <div class="line"></div>
     </div>
 </template>
 
 <script>
+    import {apiAddress} from "@/utils/apiAddress"
     export default {
         data() {
             return {
-                title:"我的收益"
+                title:"我的收益",
+                income:{}
             }
         },
+        created(){
+
+        },
+        methods:{
+            getIncome(){
+               apiAddress.income({}).then((result)=>{
+                   if(result.code==1){
+                       this.income=result.data
+                   }
+               }) 
+            }
+        }
     }
 </script>
 

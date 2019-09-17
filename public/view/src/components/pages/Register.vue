@@ -83,7 +83,6 @@
                     })
                     return
                 }
-                console.log(data)
                 apiAddress.register(data).then((result)=>{
                     if(result.code==1){
                         this.$store.state.loginInfo=result.data.userinfo;

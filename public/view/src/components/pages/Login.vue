@@ -72,7 +72,9 @@
                             message: "登录成功",
                             position:"bottom"
                         })
+                        
                         this.$store.state.loginInfo=result.data.userinfo;
+
                         localStorage.setItem("loginInfo",JSON.stringify(result.data.userinfo))
                         this.$router.push({
                             name:"main"

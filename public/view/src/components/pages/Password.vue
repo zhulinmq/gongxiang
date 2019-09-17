@@ -84,7 +84,7 @@ import {apiAddress} from "@/utils/apiAddress"
                             message:"修改成功",
                             position:"bottom"
                         })
-                        this.$route.push({name:"login"})
+                        this.$router.push({name:"login"})
                     }else{
                         this.$toast({
                             message:result.msg,

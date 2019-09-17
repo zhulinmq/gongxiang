@@ -15,21 +15,21 @@
         <div class="viewPrice">
             <div class="display_cc">
                 <div class="item display_cc one">
-                    <div class="num">99</div>
+                    <div class="num">{{userInfo.device_num}}</div>
                     <div class="name">设备总数</div>
                 </div>
                 <div class="item display_cc two">
-                    <div class="num">99</div>
+                    <div class="num">{{userInfo.score}}</div>
                     <div class="name">今日收益</div>
                 </div>
             </div>
             <div class="display_cc">
-                <div class="item display_cc three">
+                <div class="item display_cc three" @click="goCashWithdrawal">
                     <div class="num">{{userInfo.money}}</div>
                     <div class="name">可提现</div>
                 </div>
-                <div class="item display_cc four">
-                    <div class="num">99</div>
+                <div class="item display_cc four" @click="goDiscountRecord">
+                    <div class="num">{{userInfo.successions}}</div>
                     <div class="name">提现记录</div>
                 </div>
             </div>
@@ -79,6 +79,17 @@
             this.getInfo()
         },
         methods: {
+            goCashWithdrawal(){
+                //去提现
+                this.$router.push({
+                    name:"cashWithdrawal"
+                })
+            },
+            goDiscountRecord(){
+                this.$router.push({
+                    name:"discountRecord"
+                })
+            },
             getInfo(){
                 apiAddress.articleInfo({}).then((result)=>{
                     if(result.code==1){
@@ -92,7 +103,7 @@
                     if(result.code==1){
                         this.userInfo=result.data.welcome
                         this.$store.state.userInfo=result.data.welcome
-                        localStorage.setItem("userInfo",result.data.welcome)
+                        localStorage.setItem("userInfo",JSON.stringify(result.data.welcome) )
                     }
                 })
             },

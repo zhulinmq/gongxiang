@@ -1,6 +1,7 @@
 import { api } from "@/utils/api";
 import { http } from "@/utils/http";
-let url = api.API_BASE;
+// let url = api.API_BASE;
+let url = "/api/api";
 console.log(url)
 const apiAddress = {
     /**
@@ -111,15 +112,15 @@ const apiAddress = {
      */
     bindBankcard(data) {
         //绑定银行卡
-        return http.post(url + "/bankcard/bind", data)
+        return http.post(url + "/bank_card/bind", data)
     },
     /**
      * 
      * @param {*} data 
      */
     towithdraw(data) {
-        //提现
-        return http.post(url + "/user/towithdraw", data)
+        //去提现
+        return http.postNone(url + "/user/towithdraw", data)
     },
     articleInfo(data) {
         //获取公司简介
@@ -132,6 +133,10 @@ const apiAddress = {
     withdraw_log(data) {
         //提现记录
         return http.postNone(url + "/user/withdraw_log", data)
+    },
+    dowithdraw(data) {
+        //申请提现
+        return http.post(url + "/user/dowithdraw", data)
     }
 }
 export { apiAddress }

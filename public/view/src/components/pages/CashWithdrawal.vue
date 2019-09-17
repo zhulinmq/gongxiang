@@ -3,13 +3,13 @@
         <Head :title="titile"></Head>
         <div class="cashWithdrawalView">
             <div class="line"></div>
-            <div class="item display_csb">
+            <div class="item display_csb" @click="selectBank">
                 <div class="display_cfs">
-                    <img src="../../common/images/index/bank1.png" class="bank">
+                    <img :src="data.bank_icon" class="bank">
                     <div class="">
-                        <div class="bankName">工商银行(尾号3499)</div>
+                        <div class="bankName">{{data.bank_info}}</div>
                         <div class="bankNum">
-                            <span>最多可以提现88.8</span>
+                            <span>最多可以提现{{data.max_out}}</span>
                         </div>
                     </div>
                 </div>
@@ -20,13 +20,13 @@
                 <div class="display_cfs">
                     <div class="fh">¥</div>
                     <div class="">
-                        <input type="text" placeholder="请输入转出金额" class="inputClass">
+                        <input type="text" v-model="money" placeholder="请输入转出金额" class="inputClass">
                     </div>
                 </div>
                 <div class="allText">全部转出</div>
             </div>
             <div class="btn display_cc">
-                <div class="btn_btn display_cc">确认转出</div>
+                <div class="btn_btn display_cc" @click="dowithdraw">确认转出</div>
             </div>
 
             <div class="becareful">
@@ -42,7 +42,7 @@
             <div class="listName">
                 <div class="bankSelect display_cc">请选择银行卡</div>
                 <div class="bankList">
-                    <div class="item display_csb borderDash">
+                    <div class="item display_csb borderDash" @click="selectItem()">
                         <div class="display_cfs">
                             <img src="../../common/images/index/bank1.png" class="bank">
                             <div class="">
@@ -71,14 +71,49 @@
 </template>
 
 <script>
+import {apiAddress} from "@/utils/apiAddress"
+import commmon from "@/common/js/common"
     export default {
         data() {
             return {
                 titile: "提现",
-                show:true
+                show:false,
+                data:{},
+                money:0
             }
         },
+        created(){
+            this.towithdraw()
+        },
         methods:{
+            dowithdraw(){
+                let data={
+                    money:this.money,
+                    bank_id:this.data.bank_id
+                }
+                apiAddress.dowithdraw(data).then((result)=>{
+                    if(result.code==1){
+                        this.$toast({
+                            message:"提现成功",
+                            position:"bottom"
+                        })
+                    }
+                })
+            },
+            towithdraw(){
+                apiAddress.towithdraw({}).then((result)=>{
+                    if(result.code==1){
+                        
+                        this.data=result.data
+                    }
+                })
+            },
+            selectItem(){
+                this.show=false
+            },
+            selectBank(){
+                this.show=true;
+            },
             resizepage() {
                 document.getElementsByTagName("html")[0].style.height =
                     window.innerHeight + "px";

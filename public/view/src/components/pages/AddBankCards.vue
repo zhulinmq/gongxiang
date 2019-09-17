@@ -35,14 +35,14 @@
                             <input type="text" v-model="reserved_mobile" placeholder="请填写预留手机号码" class="inputName">
                         </div>
                     </div>
-                    <div class="item display_csb">
+                    <!-- <div class="item display_csb">
                         <div class="name">验证码</div>
                         <div class="rightName testgetCode">
                             <input type="text" v-model="bank_code" placeholder="请填写" class="inputName">
                             <div class="line"></div>
                             <div class="getCode" @click="getCode">{{codeMsg}}</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="btn display_cc">
@@ -81,7 +81,7 @@ import commmon from "@/common/js/common"
                     cardholder:this.cardholder,	
                     idcard:this.idcard,
                     bank_card_number:this.bank_card_number,		
-                    bank_name:this.bank_name,
+                    bank_name:"农业银行",
                     reserved_mobile	:this.reserved_mobile	,	
                     bank_code:this.bank_code,
                 }
@@ -99,13 +99,13 @@ import commmon from "@/common/js/common"
                     })
                     return
                 }
-                if(!commmon.bankCardValidate(this.bank_card_number)){
-                    this.$toast({
-                        message:"请输入正确的银行卡号！",
-                        position:"bottom"
-                    })
-                    return
-                }
+                // if(!commmon.bankCardValidate(this.bank_card_number)){
+                //     this.$toast({
+                //         message:"请输入正确的银行卡号！",
+                //         position:"bottom"
+                //     })
+                //     return
+                // }
                 if(!commmon.checkMobile(this.reserved_mobile)){
                     this.$toast({
                         message:"请输入正确的手机号！",
@@ -113,13 +113,13 @@ import commmon from "@/common/js/common"
                     })
                     return
                 }
-                if(!this.bank_code){
-                    this.$toast({
-                        message:"请输入验证码！",
-                        position:"bottom"
-                    })
-                    return
-                }
+                // if(!this.bank_code){
+                //     this.$toast({
+                //         message:"请输入验证码！",
+                //         position:"bottom"
+                //     })
+                //     return
+                // }
                 apiAddress.bindBankcard(data).then((result)=>{
                     if(result.code==1){
                         this.$toast({

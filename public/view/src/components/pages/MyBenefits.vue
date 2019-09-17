@@ -34,7 +34,7 @@
             }
         },
         created(){
-
+            this.getIncome();
         },
         methods:{
             getIncome(){

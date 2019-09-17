@@ -153,17 +153,23 @@ class User extends Api
     {
         $user = $this->auth->getUser();
         $username = $this->request->request('username');
-        $avatar = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
+//        $avatar = $this->request->request('avatar', '', 'trim,strip_tags,htmlspecialchars');
+        $avatar = $this->request->file('avatar');
+
         if ($username) {
             $exists = \app\common\model\User::where('username', $username)->where('id', '<>', $user['id'])->find();
             if ($exists) {
                 $this->error(__('Username already exists'));
             }
-            $exists->username = $username;
+            $user->username = $username;
         }
-        $exists->avatar = $avatar;
-        $exists->save();
-        $exists->success();
+        if ($avatar) {
+            $res = $this->uploadImg($avatar, 1);//上传会员头像
+            $user->avatar = $res;
+        }
+//        $user->avatar = $avatar;
+        $user->save();
+        $this->success();
     }
 
     /**

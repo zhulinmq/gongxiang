@@ -5,7 +5,16 @@
             <div class="line"></div>
             <div class="view">
                 <div class="list">
-                    <div class="item display_csb">
+                    <div class="item display_csb" v-for="(item,index) in data" :key="index">
+                        <div class="left display_cfs">
+                            <div class="text">{{item.title}}</div>
+                            <div class="price">{{item.money}}</div>
+                        </div>
+                        <div class="time">
+                            {{item.createtime}}
+                        </div>
+                    </div>
+                    <!-- <div class="item display_csb">
                         <div class="left display_cfs">
                             <div class="text">提现</div>
                             <div class="price">200</div>
@@ -13,16 +22,7 @@
                         <div class="time">
                             2018-10-10 21:10:10
                         </div>
-                    </div>
-                    <div class="item display_csb">
-                        <div class="left display_cfs">
-                            <div class="text">提现</div>
-                            <div class="price">200</div>
-                        </div>
-                        <div class="time">
-                            2018-10-10 21:10:10
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -30,10 +30,24 @@
 </template>
 
 <script>
+    import {apiAddress} from "@/utils/apiAddress"
     export default {
         data() {
             return {
-                title: "提现记录"
+                title: "提现记录",
+                data:[]
+            }
+        },
+        created(){
+            this.withdraw_log()
+        },
+        methods: {
+            withdraw_log() {
+                apiAddress.withdraw_log({}).then((result)=>{
+                    if(result.code==1){
+                        this.data=result.data
+                    }
+                })
             }
         },
     }

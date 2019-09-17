@@ -92,7 +92,7 @@ const apiAddress = {
      */
     bankcardList(data) {
         //银行卡列表
-        return http.postNone(url + "/bankcard/index", data)
+        return http.postNone(url + "/bank_card/index", data)
     },
     /**
      * cardholder	
@@ -120,6 +120,18 @@ const apiAddress = {
     towithdraw(data) {
         //提现
         return http.post(url + "/user/towithdraw", data)
+    },
+    articleInfo(data) {
+        //获取公司简介
+        return http.postNone(url + "/article/info", data)
+    },
+    income(data) {
+        //我的收益
+        return http.postNone(url + "/user/income", data)
+    },
+    withdraw_log(data) {
+        //提现记录
+        return http.postNone(url + "/user/withdraw_log", data)
     }
 }
 export { apiAddress }

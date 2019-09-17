@@ -3,11 +3,9 @@
        <Head :title="title"></Head>
        <div class="note">
             <div class="context">
-                <div class="title">共享陪护简介</div>
+                <div class="title">{{info.post_title}}</div>
                 <div class="text">
-                    研发生产经久耐用、方便实用、性能稳定的产品；采用现代化的生产设备，
-                    只用经得起考验的工艺和材料，严格把控生产中的每一个环节，确保每一件出厂产品的优异品质。法瑞纳凝聚了产品设计、方案策划、软件开发、
-                    硬件开发等领域的专业高级工程师
+                    {{info.post_content}}
                 </div>
             </div>
        </div>
@@ -18,8 +16,12 @@
     export default {
         data() {
             return {
-                title:"公司简介"
+                title:"公司简介",
+                info:{}
             }
+        },
+        created(){
+            this.info=JSON.parse(this.$route.query.info) 
         },
         methods: {
             onClickLeft() {

@@ -51,6 +51,7 @@ class BankCard extends Api
             Db::rollback();
             return false;
         }
+        $this->success('绑定成功');
 //        if ($result) {
 //            $this->success('绑定成功');
 //        } else {

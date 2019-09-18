@@ -20,4 +20,9 @@ class WithdrawRecord extends Model
     protected $createTime = 'createtime';
     protected $updateTime = 'updatetime';
 
+    public static function getCount($where)
+    {
+        return self::where($where)->count('id');
+    }
+
 }

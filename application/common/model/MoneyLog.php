@@ -26,4 +26,13 @@ class MoneyLog Extends Model
         return self::where($where)->sum('money');
 
     }
+
+    /**
+     * 获取今天的收益
+     * @param $where
+     */
+    public static function tody_income($where){
+
+        return self::where($where)->whereTime('createtime','today')->sum('money');
+    }
 }

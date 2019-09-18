@@ -11,6 +11,7 @@ use app\common\model\WithdrawRecord;
 use fast\Random;
 use Flc\Dysms\Client;
 use Flc\Dysms\Request\SendSms;
+use function Stringy\create;
 use think\Db;
 use think\Validate;
 
@@ -33,6 +34,10 @@ class User extends Api
     public function index()
     {
         $user = $this->auth->getUser();
+        $today_income = MoneyLog::tody_income(['user_id' => $this->auth->id]);
+        $user['today_income'] = $today_income;
+        $user['can_withdraw'] = $user['money'] - $user['freeze_money']; //可提现
+        $user['withdraw_record'] = WithdrawRecord::getCount(['user_id' => $this->auth->id]);
         $this->success('', ['welcome' => $user]);
     }
 
